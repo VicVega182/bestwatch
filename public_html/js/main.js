@@ -4,9 +4,31 @@ $(document).ready(function () {
         prevArrow: '<button type="button" class="slick-prev"><i class="icon-arrow-left"></i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="icon-arrow-right"></i></button>'
     });
-    $('.news-block__item').matchHeight({
-        row: true
-    });
+    if (device.mobile()) {
+        $('.news-block').slick({
+            dots: false,
+            arrows: false,
+            autoplay: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: true
+        });
+        $('.catalog-list').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: true
+        });
+    } else {
+        $('.news-block__item').matchHeight({
+            row: true
+        });
+    }
     $('.catalog-banner, .catalog-item').matchHeight({
         row: true
     });
@@ -55,17 +77,22 @@ $(document).ready(function () {
     slide.each(function () {
         var each = new $(this);
         var text = each.find('.banner-slider__slider__text');
-        text.css('padding', (each.innerHeight() - text.innerHeight()) / 2 + 'px 0px');
+        if (!device.mobile()) {
+            text.css('padding', (each.innerHeight() - text.innerHeight()) / 2 + 'px 0px');
+        }
     });
     $('.banner-slider__banner').height($this.width() * 4 / 7 + 'px').css('padding', ($('.banner-slider__banner').innerHeight() - $('.banner-slider__banner .inside').outerHeight()) / 2 + 'px 0px');
 }).on('click', '.content-toggle-right a', function () {
     $('.content-right').show();
 }).on('click', document, function (e) {
-    var $right = $('.content-right');
-    var $toggle = $('.content-toggle-right');
-    if (!$right.is(e.target) // если клик был не по нашему блоку
-            && $right.has(e.target).length === 0 && !$toggle.is(e.target) && $toggle.has(e.target).length === 0) { // и не по его дочерним элементам и то что не открыт
-        $right.hide(); // скрываем его
+    $this = $(this);
+    if ($this.width() < '1680') {
+        var $right = $('.content-right');
+        var $toggle = $('.content-toggle-right');
+        if (!$right.is(e.target) // если клик был не по нашему блоку
+                && $right.has(e.target).length === 0 && !$toggle.is(e.target) && $toggle.has(e.target).length === 0) { // и не по его дочерним элементам и то что не открыт
+            $right.hide(); // скрываем его
+        }
     }
 });
 $(window).resize(function () {

@@ -415,14 +415,54 @@ input, select, textarea, button {
 header {
     padding: 0 40px;
     position: relative;
+    @media @mb {
+        padding: 0;
+    }
     @media @tab {
         padding: 0 20px;
+    }
+    .header-mobile {
+        display: none;
+        @media @mb {
+            display: block;
+        }
+        nav {
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                letter-spacing: -0.3em;
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    letter-spacing: normal;
+                    width: 33.33%;
+                    text-align: center;
+                    border: 1px solid @litebg;
+                    border-right: none;
+                    &:first-child {
+                        border-left: none;
+                    }
+                    a {
+                        padding: 13px 0;
+                        display: block;
+                        text-transform: uppercase;
+                        font-size: 11px;
+                        color: @black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
     .header-first {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 28px 0 0;
+        @media @mb {
+            padding: 20px 16px;
+        }
         .header-first__left {
             text-align: left;
             display: flex;
@@ -462,6 +502,12 @@ header {
         }
         .header-first__center {
             text-align: center;
+            img {
+                max-width: 100%;
+                @media @mb {
+                    max-width: 110px;
+                }
+            }
             .logo-quote {
                 text-transform: uppercase;
                 font-size: 11px;
@@ -473,6 +519,36 @@ header {
         }
         .header-first__right {
             text-align: right;
+            .header-mobile__right {
+                display: none;
+                i {
+                    position: relative;
+                    .counter {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        font-size: 11px;
+                        color: @black;
+                        line-height: 16px;
+                        top: -8px;
+                        right: -12px;
+                        text-align: center;
+                        &.red {
+                            background: @red;
+                            color: @white;
+                            right: -10px;
+                        }
+                    }
+                }
+                @media @mb {
+                    display: block;
+                    a {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+            }
             a {
                 color: @black;
                 font-size: 13px;
@@ -485,6 +561,9 @@ header {
                 i {
                     font-size: 20px;
                     margin-right: 5px;
+                    @media @mb {
+                        font-size: 13px;
+                    }
                 }
             }
         }
@@ -768,10 +847,16 @@ header {
 footer {
     background: @black;
     padding: 50px 40px;
+    @media @mb {
+        padding: 20px 16px;
+    }
     .footer-menu {
         letter-spacing: -0.3em;
         border-bottom: 1px solid @fborder;
         padding-bottom: 50px;
+        @media @mb {
+            padding-bottom: 6px;
+        }
         nav, .footer-menu__info {
             display: inline-block;
             vertical-align: top;
@@ -779,6 +864,9 @@ footer {
         nav {
             width: 85%;
             letter-spacing: -0.3em;
+            @media @mb {
+                width: 100%;
+            }
             @media @tab {
                 width: 100%;
             }
@@ -790,6 +878,9 @@ footer {
                 vertical-align: top;
                 width: 25%;
                 list-style: none;
+                @media @mb {
+                    width: 100%;
+                }
                 @media @xs {
                     padding-right: 5%;
                 }
@@ -815,6 +906,9 @@ footer {
         .footer-menu__info {
             width: 15%;
             letter-spacing: normal;
+            @media @mb {
+                width: 100%;
+            }
             @media @tab {
                 width: 100%;
                 margin-top: 30px;
@@ -914,9 +1008,15 @@ footer {
             width: 50%;
             text-align: center;
             padding: 30px 0;
+            @media @mb {
+                width: 100%;
+            }
         }
         .footer-social__left {
             border-right: 1px solid @fborder;
+            @media @mb {
+                border: none;
+            }
             a {
                 display: inline-block;
                 vertical-align: middle;
@@ -946,6 +1046,12 @@ footer {
                 text-align: center;
                 line-height: 46px;
                 margin: 0 6px;
+                @media @mb {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 15px;
+                    line-height: 30px;
+                }
                 @media @tab {
                     width: 36px;
                     height: 36px;
@@ -996,9 +1102,15 @@ footer {
 .content {
     display: flex;
     align-items: stretch;
+    @media @mb {
+        display: block;
+    }
     .content-left {
         flex-basis: 89.43%;
         border-right: 1px solid @gray;
+        @media @mb {
+            width: 100%;
+        }
         @media @tab {
             flex-basis: ~'calc(100% - 60px)';
         }
@@ -1025,6 +1137,9 @@ footer {
 .banner-slider {
     display: flex;
     align-content: stretch;
+    @media @mb {
+        flex-wrap: wrap;
+    }
     @media @tab {
         flex-wrap: wrap;
     }
@@ -1032,6 +1147,10 @@ footer {
         flex-basis: 66.66%;
         max-width: 320px;
         position: relative;
+        @media @mb {
+            flex-basis: 100%;
+            height: 300px!important;
+        }
         @media @tab {
             flex-basis: 100%;
         }
@@ -1054,6 +1173,9 @@ footer {
                 .slick-slide {
                     height: 100%;
                     background-size: cover!important;
+                    @media @mb {
+                        position: relative;
+                    }
                 }
             }
         }
@@ -1072,6 +1194,10 @@ footer {
             &.slick-prev {
                 left: 20px;
             }
+            @media @mb {
+                bottom: 50%;
+                margin-bottom: -11px;
+            }
         }
         .slick-dots {
             position: absolute;
@@ -1080,6 +1206,9 @@ footer {
             margin: 0;
             padding: 0;
             left: 50%;
+            @media @mb {
+                display: none!important;
+            }
             li {
                 display: inline-block;
                 button {
@@ -1113,16 +1242,31 @@ footer {
             float: right;
             margin: 0 30px;
             display: inline-block;
+            @media @mb {
+                text-align: center;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                width: 100%;
+                padding: 0 16px;
+                margin: 0;
+            }
             .title {
                 font-size: 30px;
                 font-family: "PSB";
                 line-height: 1.2;
                 color: @white;
+                @media @mb {
+                    font-size: 18px;
+                }
             }
             .quote {
                 font-size: 16px;
                 color: @white;
                 margin-bottom: 26px;
+                @media @mb {
+                    font-size: 12px;
+                }
             }
             a {
                 display: inline-block;
@@ -1134,6 +1278,9 @@ footer {
                 font-weight: 700;
                 letter-spacing: 0.5px;
                 padding: 10px 40px;
+                @media @mb {
+                    display: none;
+                }
                 &:hover {
                     background: @white;
                     color: @black;
@@ -1145,6 +1292,10 @@ footer {
         flex-basis: 34.33%;
         background: @litebg;
         text-align: center;
+        @media @mb {
+            flex-basis: 100%;
+            height: 420px!important;
+        }
         @media @tab {
             flex-basis: 100%;
             letter-spacing: -0.3em;
@@ -1174,6 +1325,9 @@ footer {
             font-family: 'PSB';
             font-size: 24px;
             margin: 0 0 10px;
+            @media @mb {
+                font-size: 18px;
+            }
             @media @tab {
                 font-size: 18px;
             }
@@ -1183,6 +1337,9 @@ footer {
         }
         .banner-timer {
             margin-bottom: 65px;
+            @media @mb {
+                margin-bottom: 20px;
+            }
             @media @tab {
                 margin-bottom: 0px;
             }
@@ -1208,6 +1365,9 @@ footer {
                 padding: 0 4px;
                 font-size: 18px;
                 color: @black;
+                @media @mb {
+                    font-size: 14px;
+                }
             }
         }
         .banner-item {
@@ -1222,6 +1382,9 @@ footer {
                 display: inline-block;
                 vertical-align: middle;
                 width: 50%;
+                @media @mb {
+                    width: 100%;
+                }
                 @media @xs {
                     width: 100%;
                 }
@@ -1230,6 +1393,10 @@ footer {
                 text-align: right;
                 position: relative;
                 padding: 0 15px;
+                @media @mb {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
                 @media @xs {
                     text-align: center;
                     margin-bottom: 20px;
@@ -1248,12 +1415,19 @@ footer {
                     position: absolute;
                     bottom: 10px;
                     right: 0;
+                    @media @mb {
+                        right: 70px;
+                        bottom: 0;
+                    }
                     @media @xs {
                         right: 20px;
                     }
                 }
                 img {
                     max-width: 100%;
+                    @media @mb {
+                        max-height: 176px;
+                    }
                     @media @xs {
                         max-height: 150px;
                     }
@@ -1307,12 +1481,20 @@ footer {
 .news-block {
     letter-spacing: -0.3em;
     padding: 30px 0;
+    @media @mb {
+        padding: 0;
+    }
     .news-block__item {
         letter-spacing: normal;
         display: inline-block;
         vertical-align: top;
         width: 16.66%;
         padding: 0 30px;
+        @media @mb {
+            padding: 20px 16px;
+            max-width: 230px;
+            border-right: 1px solid @gray;
+        }
         @media @tab {
             width: 25%;
             padding: 0 20px;
@@ -1395,6 +1577,9 @@ footer {
 }
 .reccomend-block {
     display: flex;
+    @media @mb {
+        flex-wrap: wrap;
+    }
     @media @tab {
         flex-wrap: wrap;
     }
@@ -1402,6 +1587,10 @@ footer {
         flex-basis: 66.66%;
         letter-spacing: -0.3em;
         max-height: 520px;
+        @media @mb {
+            flex-basis: 100%;
+            max-height: 100%;
+        }
         @media @xs {
             flex-basis: 50%;
         }
@@ -1416,6 +1605,9 @@ footer {
         }
         .reccomend-block__item {
             width: 50%;
+            @media @mb {
+                width: 100%;
+            }
             @media @xs {
                 width: 100%;
                 height: 50%;
@@ -1589,8 +1781,8 @@ footer {
         padding: 75px 30px 0;
         overflow: hidden;
         max-height: 520px;
-        @media @tab {
-
+        @media @mb {
+            flex-basis: 100%;
         }
         @media @xs {
             flex-basis: 50%;
@@ -1701,6 +1893,9 @@ footer {
         font-size: 24px;
         line-height: 1.25;
         color: @white;
+        @media @mb {
+            font-size: 14px;
+        }
         @media @tab {
             font-size: 18px;
         }
@@ -1708,6 +1903,10 @@ footer {
     .howto-article {
         width: 33.34%;
         padding: 130px 30px;
+        @media @mb {
+            width: 100%;
+            padding: 48px 16px;
+        }
         @media @tab {
             width: 33.33%;
             padding: 130px 20px;
@@ -1728,6 +1927,10 @@ footer {
     .howto-video {
         width: 66.66%;
         padding: 130px 250px;
+        @media @mb {
+            width: 100%;
+            padding: 48px 16px;
+        }
         @media @tab {
             width: 66.66%;
             padding: 130px 100px;
@@ -1810,6 +2013,9 @@ footer {
             border: 1px solid @gray;
             border-right: none;
             border-top: none;
+            @media @mb {
+                max-width: 230px;
+            }
             @media @tab {
                 width: 33.33%;
             }
@@ -1881,6 +2087,7 @@ footer {
                     height: 180px;
                     max-width: 100%;
                     object-fit: cover;
+                    margin: 0 auto;
                 }
             }
             .catalog-item__footer {
@@ -1952,6 +2159,9 @@ footer {
                         border-width: 10px;
                         margin-top: -10px;
                     }
+                    @media @mb {
+                        display: none;
+                    }
                 }
                 .catalog-item__buy {
                     display: inline-block;
@@ -1966,8 +2176,16 @@ footer {
                     bottom: 30px;
                     right: 20px;
                     visibility: hidden;
+                    @media @mb {
+                        visibility: visible;
+                        width: 36px;
+                        height: 36px;
+                    }
                     i {
                         line-height: 43px;
+                        @media @mb {
+                            line-height: 34px;
+                        }
                     }
                 }
             }
@@ -1986,6 +2204,9 @@ footer {
             width: 33.36%;
             background-size: cover!important;
             letter-spacing: normal;
+            @media @mb {
+                display: none!important;
+            }
             @media @tab {
                 width: 66.66%;
             }
@@ -2084,6 +2305,12 @@ footer {
         padding: 113px 0;
         background: url(../images/subscribe.png) no-repeat transparent;
         background-position: 80% bottom;
+        @media @mb {
+            width: 100%;
+            text-align: center;
+            padding: 130px 0 30px;
+            background-position: inherit;
+        }
         @media @tab {
             width: 100%;
         }
@@ -2102,6 +2329,11 @@ footer {
         .inside {
             max-width: 360px;
             margin-left: 19%;
+            @media @mb {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 0 16px;
+            }
             @media @tab {
                 margin-left: 5%;
             }
@@ -2117,6 +2349,9 @@ footer {
                 line-height: 1.33;
                 color: @black;
                 margin: 0 0 28px;
+                @media @mb {
+                    font-size: 18px;
+                }
             }
             .subscribe-form {
                 position: relative;
@@ -2150,6 +2385,9 @@ footer {
     .advantage {
         width: 33.33%;
         display: inline-block;
+        @media @mb {
+            width: 100%;
+        }
         @media @tab {
             width: 100%;
         }
@@ -2191,11 +2429,20 @@ footer {
                 line-height: 1.6;
                 color: @black;
             }
+            @media @mb {
+                flex-basis: 100%;
+                border: none;
+                border-bottom: 1px solid @gray;
+                height: 160px;
+            }
         }
     }
 }
 .description-block {
     padding: 40px;
+    @media @mb {
+        padding: 16px;
+    }
     h2 {
         font-family: "PSB";
         font-size: 24px;
@@ -2219,6 +2466,9 @@ footer {
 /* Right column style */
 
 .content-toggle-right {
+    @media @mb {
+        display: none;
+    }
     a {
         border: none;
         margin: 0;
@@ -2253,6 +2503,9 @@ footer {
     }
 }
 .content-right {
+    @media @mb {
+        display: none;
+    }
     @media @md {
         display: none;
     }

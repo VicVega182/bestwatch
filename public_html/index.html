@@ -16,6 +16,7 @@
 
         <!-- JS START -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/device.min.js"></script>
         <script src="js/iscroll.js"></script>
         <script src="js/drawer.js"></script>
         <script src="js/jquery.matchHeight.js"></script>
@@ -136,10 +137,10 @@
         <div class="content">
             <div class="content-left">
                 <header class="header">
-                    <div class="header-first">
+                    <div class="header-first"> <!-- Не выводить на телефонах -->
                         <div class="header-first__left">
                             <div class="header-menu"><a href="#" class="drawer-toggle"><i class="icon-menu"></i></a></div>
-                            <div class="header-phone">
+                            <div class="header-phone hide-mb">
                                 <p>8:00 - 23:00</p>
                                 <a href="tel:+78128002332">+7 812 800 23 32</a>
                             </div>
@@ -147,14 +148,18 @@
                         <div class="header-first__center">
                             <a href="/">
                                 <img src="images/logo.svg">
-                                <p class="logo-quote">Лучший выбор часов</p>
+                                <p class="logo-quote hide-mb">Лучший выбор часов</p>
                             </a>
                         </div>
                         <div class="header-first__right">
-                            <a href="#" class="header-login"><i class="icon-user"></i><span>Войти</span></a>
+                            <a href="#" class="header-login hide-mb"><i class="icon-user"></i><span>Войти</span></a>
+                            <div class="header-mobile__right">
+                                <a href="#"><i class="icon-search"></i></a>
+                                <a href="#"><i class="icon-cart"><span class="counter red">5</span></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="header-second">
+                    <div class="header-second hide-mb"> <!-- Не выводить на телефонах -->
                         <div class="header-nav">
                             <nav>
                                 <ul>
@@ -261,6 +266,15 @@
                                 <button type="submit"><i class="icon-search"></i></button>
                             </div>
                         </div>
+                    </div>
+                    <div class="header-mobile"> <!-- Не выводить на планшетах и ПК -->
+                        <nav>
+                            <ul>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">Бренды</a></li>
+                                <li><a href="#">Sale</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </header>
                 <div class="wrapper">
@@ -810,7 +824,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="banner-horizontal" style="background: url(images/banner-horizontal.png) no-repeat">
+                    <div class="banner-horizontal hide-mb" style="background: url(images/banner-horizontal.png) no-repeat">
                         <a href="#">
                             <div class="banner-horizontal__info">
                                 <p class="banner-horizontal__title">При покупке женских часов<br>браслет в подарок</p>
@@ -827,7 +841,7 @@
                                     и последних поступлениях</p>
                                 <form action="" class="subscribe-form">
                                     <input type="text" placeholder="Введите e-mail">
-                                    <input type="submit" class="red-btn" value="Подписаться">
+                                    <button type="submit" class="red-btn">Подписаться</button>
                                 </form>
                             </div>
                         </div>
@@ -865,7 +879,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="description-block">
+                    <div class="description-block hide-mb">
                         <h2>Просто текст</h2>
                         <p>Японские часы - кварцевые и электронные - на сегодняшний день прочно заняли лидерские позиции среди доступных качественных часов во всем мире. Это и неудивительно, ведь Япония - признанный лидер в производстве высокотехнологичных товаров. Первые японские часы и первые кварцевые часы - практически одно и то же.</p>
                         <p>Первый часовой магазин в 1881 году в Японии открыл основатель всемирно известной на сегодняшний день компании Seiko. Кварцевые наручные часы Seiko были представлены миру в 1969-м. Эти японские часы сразу же произвели настоящий фурор в часовой промышленности: они были точнее механической классики благодаря меньшему количеству деталей и принципиально иному принципу работы. Благодаря этому японские часы стали и более надежными, ударопрочными, водостойкими. Сложное механическое устройство было намного труднее защитить от воздействия окружающей среды.</p>
@@ -926,7 +940,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="footer-shops">
+                    <div class="footer-shops hide-mb">
                         <h5 class="footer-shops__title">Магазины в Санкт-Петербурге</h5>
                         <div class="footer-shops__list">
                             <a href="#">Континент</a>
