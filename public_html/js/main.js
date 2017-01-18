@@ -1,3 +1,12 @@
+$.fn.extend({
+    animateCss: function (animationName) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function () {
+            $(this).removeClass('animated ' + animationName);
+        });
+    }
+});
+
 $(document).ready(function () {
     $('.banner-slider__slider').slick({
         dots: true,
@@ -18,18 +27,22 @@ $(document).ready(function () {
         $('.catalog-list').slick({
             dots: false,
             arrows: false,
-            infinite: true,
+            infinite: false,
             speed: 300,
             slidesToShow: 1,
-            centerMode: false,
+            centerMode: true,
             variableWidth: true
         });
+        $('.footer-menu ul li').not('.title').hide();
     } else {
         $('.news-block__item').matchHeight({
             row: true
         });
     }
     $('.catalog-banner, .catalog-item').matchHeight({
+        row: true
+    });
+    $('.reccomend-right, .reccomend-left').matchHeight({
         row: true
     });
     $('.drawer').drawer({
@@ -94,6 +107,23 @@ $(document).ready(function () {
             $right.hide(); // скрываем его
         }
     }
+}).on('click', '.footer-menu .title', function (e) {
+    var $this = $(this);
+    var ul = $this.closest('ul');
+    var li = ul.find('li');
+    if (device.mobile()) {
+        $this.toggleClass("open");
+        li.not('.title').toggle().animateCss('fadeIn');
+        e.preventDefault();
+    }
+}).on('focus', '.header-search__inside input', function() {
+    var $this = $(this);
+    var div = $this.closest('.header-search__inside');
+    div.addClass('focus');
+}).on('focusout', '.header-search__inside input', function() {
+    var $this = $(this);
+    var div = $this.closest('.header-search__inside');
+    div.removeClass('focus');
 });
 $(window).resize(function () {
     $('.banner-slider__slider').css('max-width', $('.banner-slider').width() * (parseFloat($('.banner-slider__slider').css('flex-basis')) / 100) + 'px');
