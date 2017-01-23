@@ -29,8 +29,120 @@
         <!-- JS END -->
     </head>
     <body class="drawer drawer--left">
+        <div class="mobile-menu">
+            <div class="mobile-menu__container">
+                <div class="mobile-menu__header">
+                    <a href="#"><i class="icon-heart-o"><span class="counter">16</span></i></a>
+                    <a href="#" class="eye"><i class="icon-eye"><span class="counter">158</span></i></a>  
+                    <a href="#" class="close-menu menu-mobile__hide"><i class="icon-close"></i></a>
+                </div>
+                <div class="mobile-menu__body">
+                    <a href="#" class="city-change">Санкт-Петербург <i class="icon-arrow-dd"></i></a>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Магазины</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                            <li><a href="#">Возврат</a></li>
+                            <li><a href="#">Кредит</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Видеообзоры</a></li>
+                        </ul>
+                    </nav>
+                    <div class="info-block">
+                        <a href="#"><i class="icon-user"></i> Войти</a>
+                        <a href="#" class="quote">Регистрация</a>
+                    </div>
+                    <div class="info-block">
+                        <a href="#"><i class="icon-pencil"></i> Задать вопрос</a>
+                    </div>
+                    <div class="info-block">
+                        <a href="tel:+78128002332"><i class="icon-phone"></i> +7 812 800 23 32</a>
+                        <span class="quote">с 8:30 до 23:00</span>
+                    </div>
+                    <div class="info-block">
+                        <a href="tel:+78008002332"><i class="icon-phone"></i> 8 800 800 23 32</a>
+                        <span class="quote">Круглосуточно</span>
+                    </div>
+                </div>
+                <div class="mobile-menu__footer">
+                    <a href="#"><i class="icon-google"></i></a>
+                    <a href="#"><i class="icon-insta"></i></a>
+                    <a href="#"><i class="icon-vk"></i></a>
+                    <a href="#"><i class="icon-twitter"></i></a>
+                    <a href="#"><i class="icon-fb"></i></a>
+                    <a href="#"><i class="icon-ok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-catalog">
+            <div class="mobile-menu__container">
+                <div class="mobile-menu__header">
+                    <a href="#" class="close-catalog hidden"><i class="icon-arrow-left"></i></a>
+                    <a href="#" class="close-menu menu-catalog__hide"><i class="icon-close"></i></a>
+                </div>
+                <div class="mobile-menu__body">
+                    <h3 class="mobile__title">Каталог</h3>
+                    <nav class="catalog__nav catalog-first">
+                        <ul>
+                            <li><a href="#" data-nav="man">Мужские часы<i class="icon-arrow-dd"></i></a></li>
+                            <li><a href="#">Женские часы<i class="icon-arrow-dd"></i></a></li>
+                            <li><a href="#">Интерьерные часы<i class="icon-arrow-dd"></i></a></li>
+                            <li><a href="#">Другое<i class="icon-arrow-dd"></i></a></li>
+                            <li><a href="#" class="red">Sale</a></li>
+                        </ul>
+                    </nav>
+                    <div class="catalog-second man">
+                        <h3 class="mobile__title">Мужские часы</h3>
+                        <nav class="catalog__nav">
+                            <ul>
+                                <li><a href="#">Все</a></li>
+                                <li><a href="#">Страны<i class="icon-arrow-dd"></i></a></li>
+                                <li><a href="#">Стиль<i class="icon-arrow-dd"></i></a></li>
+                                <li><a href="#">Бренды<i class="icon-arrow-dd"></i></a></li>
+                                <li><a href="#">Корпус<i class="icon-arrow-dd"></i></a></li>
+                                <li><a href="#">Популярное<i class="icon-arrow-dd"></i></a></li>
+                            </ul>
+                        </nav>
+                        <div class="info-block">
+                            <a href="#" class="red"><i class="icon-sale"></i> Распродажа</a>
+                            <span class="quote">157 часов</span>
+                        </div>
+                        <div class="info-block">
+                            <a href="№"><i class="icon-star-empty"></i> Эксклюзив</a>
+                            <span class="quote">350 часов</span>
+                        </div>
+                        <div class="info-block">
+                            <a href="#"><i class="icon-like"></i> Рекомендуем</a>
+                            <span class="quote">1500 часов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-brand">
+            <div class="mobile-menu__container">
+                <div class="mobile-menu__header">
+                    <a href="#" class="close-menu menu-brand__hide"><i class="icon-close"></i></a>
+                </div>
+                <div class="mobile-menu__body">
+                    <h3 class="mobile__title">Бренды</h3>
+                    <nav class="brand__nav">
+                        <ul>
+                            <li><a class="first-letter" href="#"><span>A</span>Alba</a></li>
+                            <li><a href="#">Anonimo</a></li>
+                            <li><a class="first-letter" href="#"><span>B</span>Balmain</a></li>
+                            <li><a href="#">Blanchet</a></li>
+                            <li><a class="first-letter" href="#"><span>C</span>Candino</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
         <nav class="drawer-nav" role="navigation">
-            <a href="#" class="drawer-close drawer-toggle">×</a>
+            <a href="#" class="drawer-close drawer-toggle"><i class="icon-close"></i></a>
             <div class="drawer-header">
                 <div class="drawer-header__first">
                     <div class="drawer-header__left">
@@ -80,11 +192,10 @@
                 </div>
             </div>
             <div class="drawer-footer">
-                <div class="banner-horizontal" style="background: url(images/banner-horizontal.png) no-repeat">
+                <div class="banner-horizontal" style="background: url(images/hand.png) no-repeat">
                     <a href="#">
                         <div class="banner-horizontal__info">
                             <p class="banner-horizontal__title">При покупке женских часов браслет в подарок</p>
-                            <p class="banner-horizontal__btn">Подробнее</p>
                         </div>
                         <div class="clearfix"></div>
                     </a>
@@ -140,7 +251,10 @@
                 <header class="header">
                     <div class="header-first"> <!-- Не выводить на телефонах -->
                         <div class="header-first__left">
-                            <div class="header-menu"><a href="#" class="drawer-toggle"><i class="icon-menu"></i></a></div>
+                            <div class="header-menu">
+                                <a href="#" class="menu-mobile__open"><i class="icon-menu"></i></a>
+                                <a href="#" class="drawer-toggle hide-mb"><i class="icon-menu"></i></a>
+                            </div>
                             <div class="header-phone hide-mb">
                                 <p>8:00 - 23:00</p>
                                 <a href="tel:+78128002332">+7 812 800 23 32</a>
@@ -243,11 +357,11 @@
                                             <div class="submenu-footer">
                                                 <nav>
                                                     <ul>
-                                                        <li><a href="#" class="red">Все часы</a></li>
-                                                        <li><a href="#" class="red">Распродажа</a></li>
-                                                        <li><a href="#">Все бренды</a></li>
-                                                        <li><a href="#">Эксклюзив</a></li>
-                                                        <li><a href="#">Рекомендуем</a></li>
+                                                        <li><a href="#" class="red"><i class="icon-watch"></i>Все часы</a></li>
+                                                        <li><a href="#" class="red"><i class="icon-sale"></i>Распродажа</a></li>
+                                                        <li><a href="#"><i class="icon-brand"></i>Все бренды</a></li>
+                                                        <li><a href="#"><i class="icon-star-empty"></i>Эксклюзив</a></li>
+                                                        <li><a href="#"><i class="icon-like"></i>Рекомендуем</a></li>
                                                     </ul>
                                                 </nav>
                                             </div>
@@ -271,8 +385,8 @@
                     <div class="header-mobile"> <!-- Не выводить на планшетах и ПК -->
                         <nav>
                             <ul>
-                                <li><a href="#">Каталог</a></li>
-                                <li><a href="#">Бренды</a></li>
+                                <li><a class="mobile-catalog__open" href="#">Каталог</a></li>
+                                <li><a class="mobile-brand__open" href="#">Бренды</a></li>
                                 <li><a href="#">Sale</a></li>
                             </ul>
                         </nav>
@@ -281,7 +395,7 @@
                 <div class="wrapper">
                     <div class="banner-slider">
                         <div class="banner-slider__slider">
-                            <div style="background: url(images/banner-1.jpg) no-repeat transparent">
+                            <div style="background: url(images/Banner.png) no-repeat transparent">
                                 <div class="banner-slider__slider__text">
                                     <p class="title">Стань первым обладателем</p>
                                     <p class="quote">В нашем магазине появились свеженькие Briston Clubmaster HMS Watch</p>
@@ -381,7 +495,7 @@
                         <div class="reccomend-left">
                             <div class="reccomend-item">
                                 <div class="reccomend-item__header">
-                                    <a href="#" class="reccomend-item__title">Эксклюзив</a>
+                                    <a href="#" class="reccomend-item__title"><span>Эксклюзив</span></a>
                                     <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-right"></i></a>
                                 </div>
                                 <div class="reccomend-item__body">
@@ -395,14 +509,14 @@
                                     </a>
                                 </div>
                                 <div class="reccomend-item__footer">
-                                    <img src="images/exclusive.jpg">
+                                    <img src="images/exclusive.png">
                                 </div>
                             </div>
                         </div>
                         <div class="reccomend-right">
                             <div class="reccomend-item right-side">
                                 <div class="reccomend-item__header">
-                                    <a href="#" class="reccomend-item__title">Bestwatch рекомендует</a>
+                                    <a href="#" class="reccomend-item__title"><span>Bestwatch</span> рекомендует</a>
                                     <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-right"></i></a>
                                 </div>
                                 <div class="reccomend-item__body">
@@ -416,12 +530,12 @@
                                     </a>
                                 </div>
                                 <div class="reccomend-item__footer">
-                                    <img src="images/exclusive.jpg">
+                                    <img src="images/exclusive.png">
                                 </div>
                             </div>
                             <div class="reccomend-item right-side">
                                 <div class="reccomend-item__header">
-                                    <a href="#" class="reccomend-item__title">Все часы со скидкой</a>
+                                    <a href="#" class="reccomend-item__title"><span>Все часы</span> со скидкой</a>
                                     <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-right"></i></a>
                                 </div>
                                 <div class="reccomend-item__body">
@@ -435,19 +549,21 @@
                                     </a>
                                 </div>
                                 <div class="reccomend-item__footer">
-                                    <img src="images/exclusive.jpg">
+                                    <img src="images/exclusive.png">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="howto">
-                        <div class="howto-article" style="background: url(images/article-main.png) no-repeat">
-                            <p class="howto-type">Статья</p>
+                        <div class="howto-article">
+                            <a href="#" class="howto-type">Статья</a>
                             <a href="#" class="howto-link">Выбираем часы для экстримального путешествия</a>
+                            <div class="howto-img" style="background: url(images/photo-review.png) no-repeat"></div>
                         </div>
-                        <div class="howto-video" style="background: url(images/video-main.png) no-repeat">
-                            <p class="howto-type">Видеобзор</p>
+                        <div class="howto-video">
+                            <a href="#" class="howto-type">Видеобзор</a>
                             <a href="#" class="howto-link">Умные часы от Swatch составят конкуренцию Apple Watch</a>
+                            <div class="howto-img" style="background: url(images/video-review.png) no-repeat"></div>
                         </div>
                     </div>
                     <div class="catalog">
@@ -468,7 +584,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -492,7 +608,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -516,7 +632,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -540,7 +656,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -564,7 +680,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -588,7 +704,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -620,7 +736,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -644,7 +760,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -668,7 +784,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -692,7 +808,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -716,7 +832,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -740,7 +856,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -764,7 +880,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -788,7 +904,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -812,7 +928,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -836,7 +952,7 @@
                                 </div>
                                 <div class="catalog-item__body">
                                     <a href="#">
-                                        <img src="images/exclusive.jpg">
+                                        <img src="images/exclusive.png">
                                     </a>
                                 </div>
                                 <div class="catalog-item__footer">
@@ -1033,217 +1149,221 @@
                 <div class="footer-last">Обращаем ваше внимание на то, что приведённые цены и характеристики товаров носят исключительно ознакомительный характер и не являются публичной офертой, определённой пунктом 2 статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации о характеристиках товаров, их наличия и стоимости связывайтесь, пожалуйста, с менеджерами нашей компании.</div>
             </div>
             <div class="content-toggle-right">
-                <a href="#"><i class="icon-cart"><span class="counter red">5</span></i></a>
-                <a href="#"><i class="icon-heart-o"><span class="counter">16</span></i></a>
-                <a href="#"><i class="icon-eye"></i></a>
+                <div class="inside">
+                    <a href="#"><i class="icon-cart"><span class="counter red">5</span></i></a>
+                    <a href="#"><i class="icon-heart-o"><span class="counter">16</span></i></a>
+                    <a href="#"><i class="icon-eye"></i></a>
+                </div>
             </div>
             <div class="content-right">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#cart" aria-controls="cart" role="tab" data-toggle="tab"><i class="icon-cart"><span class="counter red">5</span></i></a></li>
-                    <li role="presentation"><a href="#liked" aria-controls="liked" role="tab" data-toggle="tab"><i class="icon-heart-o"><span class="counter">16</span></i></a></li>
-                    <li role="presentation"><a href="#watch" aria-controls="watch" role="tab" data-toggle="tab"><i class="icon-eye"></i></a></li>
-                </ul>
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="cart">
-                        <div class="side-cart">
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <a href="#" class="side-cart__btn red"><i class="icon-cart"></i>Перейти в корзину</a>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="liked">
-                        <div class="side-cart">
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                    <div class="side-cart__control">
-                                        <a href="#" class="side-cart__basket"><i class="icon-cart-add"></i></a>
+                <div class="inside">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#cart" aria-controls="cart" role="tab" data-toggle="tab"><i class="icon-cart"><span class="counter red">5</span></i></a></li>
+                        <li role="presentation"><a href="#liked" aria-controls="liked" role="tab" data-toggle="tab"><i class="icon-heart-o"><span class="counter">16</span></i></a></li>
+                        <li role="presentation"><a href="#watch" aria-controls="watch" role="tab" data-toggle="tab"><i class="icon-eye"></i></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="cart">
+                            <div class="side-cart">
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
-                        </div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane" id="watch">
-                        <div class="side-cart">
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                    <div class="side-cart__control">
-                                        <a href="#" class="side-cart__liked"><i class="icon-heart"></i></a>
-                                        <a href="#" class="side-cart__basket"><i class="icon-cart-add"></i></a>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
                                     </div>
                                 </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="side-cart__btn red"><i class="icon-cart"></i>Перейти в корзину</a>
                             </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="liked">
+                            <div class="side-cart">
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                        <div class="side-cart__control">
+                                            <a href="#" class="side-cart__basket"><i class="icon-cart-add"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
                                 </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
                             </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="watch">
+                            <div class="side-cart">
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                        <div class="side-cart__control">
+                                            <a href="#" class="side-cart__liked"><i class="icon-heart"></i></a>
+                                            <a href="#" class="side-cart__basket"><i class="icon-cart-add"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
                                 </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
                             </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <div class="side-cart__item">
-                                <div class="side-cart__item__img">
-                                    <img src="images/exclusive.jpg">
-                                </div>
-                                <div class="side-cart__item__info">
-                                    <p class="side-cart__item__code">ES-0014-02</p>
-                                    <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
-                                    <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
-                                    <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
-                                    <a href="#" class="side-cart__item__remove">×</a>
-                                </div>
-                            </div>
-                            <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
                         </div>
                     </div>
                 </div>
