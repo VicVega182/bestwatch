@@ -2595,7 +2595,7 @@ footer {
                 border: 1px solid @gray;
             }
             @media @tab {
-                width: 33.34%;
+                width: 33.33%;
             }
             @media @xs {
                 width: 25%;
@@ -2823,7 +2823,7 @@ footer {
         .catalog-banner {
             display: inline-block;
             vertical-align: top;
-            width: 33.36%;
+            width: 33.33%;
             background-size: cover!important;
             letter-spacing: normal;
             @media @mb {
@@ -2918,6 +2918,8 @@ footer {
 }
 .subscribe-block {
     letter-spacing: -0.3em;
+    border-top: 1px solid @gray;
+    border-bottom: 1px solid @gray;
     & > div {
         letter-spacing: normal;
         display: inline-block;
@@ -2925,7 +2927,6 @@ footer {
     }
     .subscribe {
         width: 66.66%;
-        border-bottom: 1px solid @gray;
         padding: 113px 0;
         background: url(../images/subscribe.png) no-repeat transparent;
         background-position: 80% bottom;
@@ -3059,8 +3060,11 @@ footer {
             border-right: none;
             padding: 30px 20px;
             height: 200px;
+            &:nth-child(1), &:nth-child(2) {
+                border-top: none;
+            }
             &:nth-child(3), &:nth-child(4) {
-                border-bottom: 1px solid @gray;
+                border-bottom: none;
             }
             i {
                 font-size: 34px;
@@ -3071,11 +3075,32 @@ footer {
                 line-height: 1.6;
                 color: @black;
             }
+            @media @sm {
+                &:nth-child(1), &:nth-child(2) {
+                    border-top: 1px solid @gray;
+                }
+            }
+            @media @xs {
+                &:nth-child(1), &:nth-child(2) {
+                    border-top: 1px solid @gray;
+                }
+            }
+            @media @tab {
+                &:nth-child(1), &:nth-child(2) {
+                    border-top: 1px solid @gray;
+                }
+            }
             @media @mb {
                 flex-basis: 100%;
                 border: none;
                 border-bottom: 1px solid @gray;
                 height: 160px;
+                &:nth-child(1) {
+                    border-top: 1px solid @gray;
+                }
+                &:nth-child(3) {
+                    border-bottom: 1px solid @gray;
+                }
             }
         }
     }

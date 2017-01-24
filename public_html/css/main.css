@@ -2877,7 +2877,7 @@ footer .footer-information .footer-information__right a:hover {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .catalog .catalog-list .catalog-item {
-    width: 33.34%;
+    width: 33.33%;
   }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
@@ -3131,7 +3131,7 @@ footer .footer-information .footer-information__right a:hover {
 .catalog .catalog-list .catalog-banner {
   display: inline-block;
   vertical-align: top;
-  width: 33.36%;
+  width: 33.33%;
   background-size: cover!important;
   letter-spacing: normal;
 }
@@ -3232,6 +3232,8 @@ footer .footer-information .footer-information__right a:hover {
 }
 .subscribe-block {
   letter-spacing: -0.3em;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
 }
 .subscribe-block > div {
   letter-spacing: normal;
@@ -3240,7 +3242,6 @@ footer .footer-information .footer-information__right a:hover {
 }
 .subscribe-block .subscribe {
   width: 66.66%;
-  border-bottom: 1px solid #e1e1e1;
   padding: 113px 0;
   background: url(../images/subscribe.png) no-repeat transparent;
   background-position: 80% bottom;
@@ -3412,9 +3413,13 @@ footer .footer-information .footer-information__right a:hover {
   padding: 30px 20px;
   height: 200px;
 }
+.subscribe-block .advantage .advantage-item:nth-child(1),
+.subscribe-block .advantage .advantage-item:nth-child(2) {
+  border-top: none;
+}
 .subscribe-block .advantage .advantage-item:nth-child(3),
 .subscribe-block .advantage .advantage-item:nth-child(4) {
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: none;
 }
 .subscribe-block .advantage .advantage-item i {
   font-size: 34px;
@@ -3425,12 +3430,36 @@ footer .footer-information .footer-information__right a:hover {
   line-height: 1.6;
   color: #484848;
 }
+@media (min-width: 1200px) and (max-width: 1365px) {
+  .subscribe-block .advantage .advantage-item:nth-child(1),
+  .subscribe-block .advantage .advantage-item:nth-child(2) {
+    border-top: 1px solid #e1e1e1;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .subscribe-block .advantage .advantage-item:nth-child(1),
+  .subscribe-block .advantage .advantage-item:nth-child(2) {
+    border-top: 1px solid #e1e1e1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .subscribe-block .advantage .advantage-item:nth-child(1),
+  .subscribe-block .advantage .advantage-item:nth-child(2) {
+    border-top: 1px solid #e1e1e1;
+  }
+}
 @media (max-width: 767px) {
   .subscribe-block .advantage .advantage-item {
     flex-basis: 100%;
     border: none;
     border-bottom: 1px solid #e1e1e1;
     height: 160px;
+  }
+  .subscribe-block .advantage .advantage-item:nth-child(1) {
+    border-top: 1px solid #e1e1e1;
+  }
+  .subscribe-block .advantage .advantage-item:nth-child(3) {
+    border-bottom: 1px solid #e1e1e1;
   }
 }
 .description-block {
