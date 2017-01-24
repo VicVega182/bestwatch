@@ -103,7 +103,7 @@
                                 <li><a href="#">Стиль<i class="icon-arrow-dd"></i></a></li>
                                 <li><a href="#">Бренды<i class="icon-arrow-dd"></i></a></li>
                                 <li><a href="#">Корпус<i class="icon-arrow-dd"></i></a></li>
-                                <li><a href="#">Популярное<i class="icon-arrow-dd"></i></a></li>
+                                <li class="free-border-bottom"><a href="#">Популярное<i class="icon-arrow-dd"></i></a></li>
                             </ul>
                         </nav>
                         <div class="info-block">
@@ -202,52 +202,43 @@
                 </div>
             </div>
         </nav>
-        <div class="header-shop hide-mb">
-            <div class="header-shop__city">
-                <i class="icon-spb"></i>
-                <span>Магазины в <a href="#">Санкт-Петербурге</a>:</span>
-            </div>
-            <div class="header-shop__list">
-                <div class="header-shop__list__item first">
-                    <a href="#"><i class="icon-crown"></i>Невский атриум</a>
-                </div>
-                <div class="header-shop__list__item">
-                    <a href="#">Континент</a>
-                </div>
-                <div class="header-shop__list__item hide-tab">
-                    <a href="#">Европолис</a>
-                </div>
-                <div class="header-shop__list__item hide-tab">
-                    <a href="#">Галерея</a>
-                </div>
-                <div class="header-shop__list__item hide-xs hide-tab">
-                    <a href="#">Мега Дыбенко</a>
-                </div>
-                <div class="header-shop__list__item hide-xs hide-tab">
-                    <a href="#">Континент</a>
-                </div>
-                <div class="header-shop__list__item hide-sm hide-xs hide-tab">
-                    <a href="#">Европолис</a>
-                </div>
-                <div class="header-shop__list__item hide-sm hide-xs hide-tab">
-                    <a href="#">Галерея</a>
-                </div>
-                <div class="header-shop__list__item hide-lg hide-md hide-sm hide-xs hide-tab">
-                    <a href="#">Мега Дыбенко</a>
-                </div>
-                <div class="header-shop__list__item hide-lg hide-md hide-sm hide-xs hide-tab">
-                    <a href="#">Континент</a>
-                </div>
-                <div class="header-shop__list__item hide-lg hide-md hide-sm hide-xs hide-tab">
-                    <a href="#">Европолис</a>
-                </div>
-                <div class="header-shop__list__item last">
-                    <a href="#">Еще 12 магазинов</a>
-                </div>
-            </div>
-        </div>
         <div class="content">
             <div class="content-left">
+                <div class="header-shop hide-mb">
+                    <div class="header-shop__city">
+                        <i class="icon-spb"></i>
+                        <span>Магазины в <a href="#">Санкт-Петербурге</a>:</span>
+                    </div>
+                    <div class="header-shop__list">
+                        <div class="header-shop__list__item first">
+                            <a href="#"><i class="icon-crown"></i>Невский атриум</a>
+                        </div>
+                        <div class="header-shop__list__item hide-tab">
+                            <a href="#">Континент</a>
+                        </div>
+                        <div class="header-shop__list__item hide-tab">
+                            <a href="#">Европолис</a>
+                        </div>
+                        <div class="header-shop__list__item hide-tab">
+                            <a href="#">Галерея</a>
+                        </div>
+                        <div class="header-shop__list__item hide-xs hide-tab">
+                            <a href="#">Мега Дыбенко</a>
+                        </div>
+                        <div class="header-shop__list__item hide-sm hide-xs hide-tab">
+                            <a href="#">Континент</a>
+                        </div>
+                        <div class="header-shop__list__item hide-sm hide-xs hide-tab">
+                            <a href="#">Европолис</a>
+                        </div>
+                        <div class="header-shop__list__item hide-md hide-sm hide-xs hide-tab">
+                            <a href="#">Галерея</a>
+                        </div>
+                        <div class="header-shop__list__item last">
+                            <a href="#">Еще 12 магазинов</a>
+                        </div>
+                    </div>
+                </div>
                 <header class="header">
                     <div class="header-first"> <!-- Не выводить на телефонах -->
                         <div class="header-first__left">
@@ -342,7 +333,7 @@
                                                                     <div class="banner-timer__counter">
                                                                         <div class="counter-main"></div>
                                                                     </div>
-                                                                    <div class="timer" data-countdown="2017/01/11"></div>
+                                                                    <div class="timer" data-countdown="2017/01/30"></div>
                                                                 </div>
                                                                 <p class="banner-item__articul">ES-0014-02</p>
                                                                 <span class="banner-item__brand">Michael Kors</span>
@@ -377,8 +368,10 @@
                         </div>
                         <div class="header-search">
                             <div class="header-search__inside">
-                                <input type="text">
-                                <button type="submit"><i class="icon-search"></i></button>
+                                <form action="">
+                                    <input type="text">
+                                    <button type="submit"><i class="icon-search"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -432,7 +425,7 @@
                                         <div class="banner-timer__counter">
                                             <div class="pie"></div>
                                         </div>
-                                        <div class="timer" data-countdown="2017/01/01"></div>
+                                        <div class="timer" data-countdown="2017/01/30"></div>
                                     </div>
                                 </div>
                                 <div class="banner-item">
@@ -495,8 +488,10 @@
                         <div class="reccomend-left">
                             <div class="reccomend-item">
                                 <div class="reccomend-item__header">
-                                    <a href="#" class="reccomend-item__title"><span>Эксклюзив</span></a>
-                                    <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-right"></i></a>
+                                    <div>
+                                        <a href="#" class="reccomend-item__title"><span>Эксклюзив</span></a>
+                                        <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-bold"></i></a>
+                                    </div>
                                 </div>
                                 <div class="reccomend-item__body">
                                     <a href="#" class="reccomend-block__item__name">
@@ -516,8 +511,10 @@
                         <div class="reccomend-right">
                             <div class="reccomend-item right-side">
                                 <div class="reccomend-item__header">
-                                    <a href="#" class="reccomend-item__title"><span>Bestwatch</span> рекомендует</a>
-                                    <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-right"></i></a>
+                                    <div>
+                                        <a href="#" class="reccomend-item__title"><span>Bestwatch</span> рекомендует</a>
+                                        <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-bold"></i></a>
+                                    </div>
                                 </div>
                                 <div class="reccomend-item__body">
                                     <a href="#" class="reccomend-item__name">
@@ -535,8 +532,10 @@
                             </div>
                             <div class="reccomend-item right-side">
                                 <div class="reccomend-item__header">
-                                    <a href="#" class="reccomend-item__title"><span>Все часы</span> со скидкой</a>
-                                    <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-right"></i></a>
+                                    <div>
+                                        <a href="#" class="reccomend-item__title"><span>Все часы</span> со скидкой</a>
+                                        <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-bold"></i></a>
+                                    </div>
                                 </div>
                                 <div class="reccomend-item__body">
                                     <a href="#" class="reccomend-item__name">
@@ -556,12 +555,12 @@
                     </div>
                     <div class="howto">
                         <div class="howto-article">
-                            <a href="#" class="howto-type">Статья</a>
+                            <p class="howto-type">Статья</p>
                             <a href="#" class="howto-link">Выбираем часы для экстримального путешествия</a>
                             <div class="howto-img" style="background: url(images/photo-review.png) no-repeat"></div>
                         </div>
                         <div class="howto-video">
-                            <a href="#" class="howto-type">Видеобзор</a>
+                            <p class="howto-type">Видеобзор</p>
                             <a href="#" class="howto-link">Умные часы от Swatch составят конкуренцию Apple Watch</a>
                             <div class="howto-img" style="background: url(images/video-review.png) no-repeat"></div>
                         </div>
@@ -569,9 +568,9 @@
                     <div class="catalog">
                         <div class="catalog__title">
                             <h3>Мужские часы</h3>
-                            <a href="#">18 856 часов <i class="icon-arrow-right"></i></a>
+                            <a href="#">18 856 часов <i class="icon-arrow-bold"></i></a>
                         </div>
-                        <div class="catalog-list">
+                        <div class="catalog-list main">
                             <div class="catalog-item">
                                 <div class="catalog-item__header">
                                     <div class="catalog-item__header__left">
@@ -721,9 +720,9 @@
                     <div class="catalog">
                         <div class="catalog__title">
                             <h3>Женские часы</h3>
-                            <a href="#">18 856 часов <i class="icon-arrow-right"></i></a>
+                            <a href="#">18 856 часов <i class="icon-arrow-bold"></i></a>
                         </div>
-                        <div class="catalog-list">
+                        <div class="catalog-list main">
                             <div class="catalog-item hide-lg  hide-md hide-sm">
                                 <div class="catalog-item__header">
                                     <div class="catalog-item__header__left">
@@ -974,7 +973,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="banner-horizontal hide-mb" style="background: url(images/banner-horizontal.png) no-repeat">
+                    <div class="banner-horizontal hide-mb" style="
+                         background: url(images/banner-horizontal.png) no-repeat #fefa94;
+                         background-size: cover;
+                         background-position: center bottom;
+                         ">
                         <a href="#">
                             <div class="banner-horizontal__info">
                                 <p class="banner-horizontal__title">При покупке женских часов<br>браслет в подарок</p>
