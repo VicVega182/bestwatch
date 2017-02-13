@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Главная</title>
+        <title>Каталог</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -387,169 +387,398 @@
                     </div>
                 </header>
                 <div class="wrapper">
-                    <div class="banner-slider">
-                        <div class="banner-slider__slider">
-                            <div style="background: url(images/Banner.png) no-repeat transparent">
-                                <div class="banner-slider__slider__text">
-                                    <p class="title">Стань первым обладателем</p>
-                                    <p class="quote">В нашем магазине появились свеженькие Briston Clubmaster HMS Watch</p>
-                                    <a href="#">Подробнее</a>
+                    <div class="catalog">
+                        <div class="catalog-page">
+                            <div class="catalog-page__header">
+                                <ol class="breadcrumb">
+                                    <li><a href="#">Главная</a></li>
+                                    <li class="active">Мужские часы</li>
+                                </ol>
+                                <div class="catalog-page__header__second">
+                                    <div class="catalog-page__header__left">
+                                        <h1>Мужские часы</h1>
+                                        <span class="page-header__counter">1780 часов</span>
+                                    </div>
+                                    <div class="catalog-page__header__right hide-tab hide-mb"> <!-- Не выводим на планшете и мобильном -->
+                                        <a href="#" class="active">По цене <i class="icon-arrow-dd"></i></a>
+                                        <a href="#">По популярности <i class="icon-arrow-dd"></i></a>
+                                        <a href="#">По новизне <i class="icon-arrow-dd"></i></a>
+                                        <a href="#">По алфавиту <i class="icon-arrow-dd"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                            <div style="background: url(images/banner-1.jpg) no-repeat transparent">
-                                <div class="banner-slider__slider__text">
-                                    <p class="title">Стань первым обладателем</p>
-                                    <p class="quote">В нашем магазине появились свеженькие Briston Clubmaster HMS Watch Supershik MAZAFAKA</p>
-                                    <a href="#">Подробнее</a>
+                            <div class="catalog-page__header__mobile"> <!-- Не выводить на ПК -->
+                                <div class="dropdown sortChange">
+                                    <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>По цене</span> <i class="icon-arrow-dd"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#">По цене</a></li>
+                                        <li><a href="#">По популярности</a></li>
+                                        <li><a href="#">По новизне</a></li>
+                                        <li><a href="#">По алфавиту</a></li>
+                                    </ul>
                                 </div>
+                                <a href="#" class="filter-open"><i class="icon-toggles"></i></a>
                             </div>
-                            <div style="background: url(images/banner-1.jpg) no-repeat transparent">
-                                <div class="banner-slider__slider__text">
-                                    <p class="title">Стань первым обладателем</p>
-                                    <p class="quote">В нашем магазине появились свеженькие Briston Clubmaster HMS Watch Supershik MAZAFAKA</p>
-                                    <a href="#">Подробнее</a>
-                                </div>
-                            </div>
-                            <div style="background: url(images/banner-1.jpg) no-repeat transparent">
-                                <div class="banner-slider__slider__text">
-                                    <p class="title">Стань первым обладателем</p>
-                                    <p class="quote">В нашем магазине появились свеженькие Briston Clubmaster HMS Watch Supershik MAZAFAKA</p>
-                                    <a href="#">Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="banner-slider__banner">
-                            <div class="inside">
-                                <div class="banner-header">
-                                    <h3>Предложение дня</h3>
-                                    <div class="banner-timer">
-                                        <div class="banner-timer__counter">
-                                            <div class="pie"></div>
+                            <div class="catalog-page__filter">
+                                <form action="">
+                                    <div class="filter-price filter-block">
+                                        <a class="filter-block__show" role="button" data-toggle="collapse" href="#filterPrice" aria-expanded="false" aria-controls="filterPrice">
+                                            <i class="icon-arrow-dd"></i> Цена <i class="icon-rub"></i>
+                                        </a>
+                                        <div class="collapse in" id="filterPrice">
+                                            <div class="collapse-inside">
+                                                <input type="text" value="1000"><span>—</span><input type="text" value="100000">
+                                            </div>
                                         </div>
-                                        <div class="timer" data-countdown="2017/01/30"></div>
                                     </div>
-                                </div>
-                                <div class="banner-item">
-                                    <div class="banner-item__left">
-                                        <img src="images/watch.png">
-                                        <span class="banner-item__sale">-35%</span>
-                                    </div>
-                                    <div class="banner-item__right">
-                                        <p class="banner-item__articul">ES-0014-02</p>
-                                        <span class="banner-item__brand">Michael Kors</span>
-                                        <span class="banner-item__model">Kempton</span>
-                                        <p class="banner-item__oldprice">4 562 990 <i class="icon-rub-lite"></i></p>
-                                        <p class="banner-item__price">3 723 990 <i class="icon-rub"></i></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-block">
-                        <div class="news-block__item">
-                            <a href="#">
-                                <p class="news-block__item__date">20 ноября</p>
-                                <p class="news-block__item__name">Black Friday 2016</p>
-                                <p class="news-block__item__preview">Главная распродажа года, скидки до 70%</p>
-                            </a>
-                        </div>
-                        <div class="news-block__item">
-                            <a href="#">
-                                <p class="news-block__item__date">20 ноября</p>
-                                <p class="news-block__item__name">Black Friday 2016</p>
-                                <p class="news-block__item__preview">Главная распродажа года, скидки до 70%</p>
-                            </a>
-                        </div>
-                        <div class="news-block__item">
-                            <a href="#">
-                                <p class="news-block__item__date">20 ноября</p>
-                                <p class="news-block__item__name">Black Friday 2016</p>
-                                <p class="news-block__item__preview">Главная распродажа года, скидки до 70%</p>
-                            </a>
-                        </div>
-                        <div class="news-block__item hide-sm hide-xs hide-tab">
-                            <a href="#">
-                                <p class="news-block__item__date">20 ноября</p>
-                                <p class="news-block__item__name">Black Friday 2016</p>
-                                <p class="news-block__item__preview">Главная распродажа года, скидки до 70%</p>
-                            </a>
-                        </div>
-                        <div class="news-block__item hide-lg hide-md hide-sm hide-xs hide-tab">
-                            <a href="#">
-                                <p class="news-block__item__date">20 ноября</p>
-                                <p class="news-block__item__name">Black Friday 2016</p>
-                                <p class="news-block__item__preview">Главная распродажа года, скидки до 70%</p>
-                            </a>
-                        </div>
-                        <div class="news-block__item last">
-                            <a href="#" class="news-block__all">Все новости</a> 
-                        </div>
-                    </div>
-                    <div class="reccomend">
-                        <div class="reccomend-left">
-                            <div class="reccomend-item">
-                                <div class="reccomend-item__header">
-                                    <div>
-                                        <a href="#" class="reccomend-item__title"><span>Эксклюзив</span></a>
-                                        <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-bold"></i></a>
-                                    </div>
-                                </div>
-                                <div class="reccomend-item__body">
-                                    <a href="#" class="reccomend-block__item__name">
-                                        <p class="reccomend-item__code">Es-0014-02</p>
-                                        <p class="reccomend-item__name"><span>Michael Kors</span> Kempton</p>
-                                        <div class="reccomend-item__priceblock">
-                                            <p class="reccomend-item__oldprice">3 723 990 <i class="icon-rub"></i></p>
-                                            <p class="reccomend-item__price">3 723 990 <i class="icon-rub"></i></p>
+                                    <div class="filter-brand filter-block">
+                                        <a class="filter-block__show collapsed" role="button" data-toggle="collapse" href="#filterBrand" aria-expanded="false" aria-controls="filterBrand">
+                                            <i class="icon-arrow-dd"></i> Бренд
+                                        </a>
+                                        <div class="collapse" id="filterBrand">
+                                            <div class="collapse-inside" data-toggles="buttons">
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn">
+                                                        <input type="checkbox" autocomplete="off"> Casio
+                                                    </label>
+                                                    <label class="btn">
+                                                        <input type="checkbox" autocomplete="off"> Orient
+                                                    </label>
+                                                    <label class="btn">
+                                                        <input type="checkbox" autocomplete="off"> Seiko
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="reccomend-item__footer">
-                                    <img src="images/exclusive.png">
-                                </div>
+                                    </div>
+                                    <div class="filter-country filter-block">
+                                        <a class="filter-block__show" role="button" data-toggle="collapse" href="#filterCountry" aria-expanded="false" aria-controls="filterCountry">
+                                            <i class="icon-arrow-dd"></i> Страна
+                                        </a>
+                                        <div class="collapse in" id="filterCountry">
+                                            <div class="collapse-inside">
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn">
+                                                        <input type="checkbox" autocomplete="off"> Россия
+                                                    </label>
+                                                    <label class="btn">
+                                                        <input type="checkbox" autocomplete="off"> Швейцария
+                                                    </label>
+                                                    <label class="btn">
+                                                        <input type="checkbox" autocomplete="off"> США
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-color filter-block">
+                                        <a class="filter-block__show" role="button" data-toggle="collapse" href="#filterColor" aria-expanded="false" aria-controls="filterColor">
+                                            <i class="icon-arrow-dd"></i> Цвет циферблата
+                                        </a>
+                                        <div class="collapse in" id="filterColor">
+                                            <div class="collapse-inside">
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn">
+                                                        <input type="checkbox" autocomplete="off"> Бежевый
+                                                    </label>
+                                                    <label class="btn">
+                                                        <input type="checkbox" autocomplete="off"> Белый
+                                                    </label>
+                                                    <label class="btn">
+                                                        <input type="checkbox" autocomplete="off"> Зеленый
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-submit filter-block">
+                                        <input type="submit" value="Применить" class="red-btn">
+                                        <a href="#" class="clearFilter"><i class="icon-close"></i> Сбросить фильтр</a>
+                                    </div>
+                                </form>
                             </div>
-                        </div>
-                        <div class="reccomend-right">
-                            <div class="reccomend-item right-side">
-                                <div class="reccomend-item__header">
-                                    <div>
-                                        <a href="#" class="reccomend-item__title"><span>Bestwatch</span> рекомендует</a>
-                                        <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-bold"></i></a>
+                            <div class="catalog-page__list">
+                                <div class="catalog-page__list__shadow"></div>
+                                <div class="catalog-checked hide-tab hide-mb">
+                                    <div class="catalog-checked__list">
+                                        <a href="#">Цена <i class="icon-close"></i></a>
+                                        <a href="#">Casio <i class="icon-close"></i></a>
+                                        <a href="#">Seiko <i class="icon-close"></i></a>
+                                        <a href="#">Зеленый циферблат <i class="icon-close"></i></a>
+                                        <a href="#">Зеленый ремень <i class="icon-close"></i></a>
+                                        <a href="#">Кожанный <i class="icon-close"></i></a>
+                                    </div>
+                                    <div class="catalog-checked__clear">
+                                        <a href="#" class="clearFilter"><i class="icon-close"></i> Сбросить фильтр</a>
                                     </div>
                                 </div>
-                                <div class="reccomend-item__body">
-                                    <a href="#" class="reccomend-item__name">
-                                        <p class="reccomend-item__code">Es-0014-02</p>
-                                        <p class="reccomend-item__name"><span>Michael Kors</span> Kempton</p>
-                                        <div class="reccomend-item__priceblock">
-                                            <p class="reccomend-item__oldprice">3 723 990 <i class="icon-rub"></i></p>
-                                            <p class="reccomend-item__price">3 723 990 <i class="icon-rub"></i></p>
+                                <div class="catalog-list">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="reccomend-item__footer">
-                                    <img src="images/exclusive.png">
-                                </div>
-                            </div>
-                            <div class="reccomend-item right-side">
-                                <div class="reccomend-item__header">
-                                    <div>
-                                        <a href="#" class="reccomend-item__title"><span>Все часы</span> со скидкой</a>
-                                        <a href="#" class="reccomend-item__quote">57 часов <i class="icon-arrow-bold"></i></a>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__header">
+                                            <div class="catalog-item__header__left">
+                                                <a href="#" class="item-label leader">Лидер продаж</a>
+                                            </div>
+                                            <div class="catalog-item__header__right">
+                                                <a href="#"><i class="icon-play"></i></a>
+                                                <a href="#"><i class="icon-heart"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="catalog-item__body">
+                                            <a href="#">
+                                                <img src="images/exclusive.png">
+                                            </a>
+                                        </div>
+                                        <div class="catalog-item__footer">
+                                            <p class="catalog-item__code">ES-0014-02</p>
+                                            <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
+                                            <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
+                                            <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
+                                            <p class="catalog-item__sale">-15%</p>
+                                            <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="reccomend-item__body">
-                                    <a href="#" class="reccomend-item__name">
-                                        <p class="reccomend-item__code">Es-0014-02</p>
-                                        <p class="reccomend-item__name"><span>Michael Kors</span> Kempton</p>
-                                        <div class="reccomend-item__priceblock">
-                                            <p class="reccomend-item__oldprice">3 723 990 <i class="icon-rub"></i></p>
-                                            <p class="reccomend-item__price">3 723 990 <i class="icon-rub"></i></p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="reccomend-item__footer">
-                                    <img src="images/exclusive.png">
+                                <div class="pagination-block">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination">
+                                            <li class="hide-mb">
+                                                <a href="#" aria-label="Previous" class="prev">
+                                                    <i class="icon-arrow-left"></i>
+                                                </a>
+                                            </li>
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#" class="active">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#" class="more">...</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li class="hide-mb">
+                                                <a href="#" aria-label="Next" class="next">
+                                                    <i class="icon-arrow-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="clearfix"></div>
+                                    <a href="#" class="showmore">Показать еще 20</a>
                                 </div>
                             </div>
                         </div>
@@ -565,427 +794,6 @@
                             <a href="#" class="howto-link">Умные часы от Swatch составят конкуренцию Apple Watch</a>
                             <div class="howto-img" style="background: url(images/video-review.png) no-repeat"></div>
                         </div>
-                    </div>
-                    <div class="catalog">
-                        <div class="catalog__title">
-                            <h3>Мужские часы</h3>
-                            <a href="#">18 856 часов <i class="icon-arrow-bold"></i></a>
-                        </div>
-                        <div class="catalog-list main">
-                            <div class="catalog-item">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item hide-tab">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item hide-sm hide-xs hide-tab">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item hide-lg  hide-md hide-sm hide-xs hide-tab">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog">
-                        <div class="catalog__title">
-                            <h3>Женские часы</h3>
-                            <a href="#">18 856 часов <i class="icon-arrow-bold"></i></a>
-                        </div>
-                        <div class="catalog-list main">
-                            <div class="catalog-item hide-lg  hide-md hide-sm">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item hide-lg  hide-md hide-sm">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item hide-sm">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item hide-sm">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-item">
-                                <div class="catalog-item__header">
-                                    <div class="catalog-item__header__left">
-                                        <a href="#" class="item-label leader">Лидер продаж</a>
-                                    </div>
-                                    <div class="catalog-item__header__right">
-                                        <a href="#"><i class="icon-play"></i></a>
-                                        <a href="#"><i class="icon-heart"></i></a>
-                                    </div>
-                                </div>
-                                <div class="catalog-item__body">
-                                    <a href="#">
-                                        <img src="images/exclusive.png">
-                                    </a>
-                                </div>
-                                <div class="catalog-item__footer">
-                                    <p class="catalog-item__code">ES-0014-02</p>
-                                    <a href="#" class="catalog-item__name"><span class="bold">Michael Kors</span> Kempton</a>
-                                    <p class="catalog-item__oldprice">4 562 990 <i class="icon-rub"></i></p> <!-- Выводить всегда, если без скидки то пустым -->  
-                                    <p class="catalog-item__price with-sale">4 562 990 <i class="icon-rub"></i></p>   
-                                    <p class="catalog-item__sale">-15%</p>
-                                    <a href="#" class="catalog-item__buy"><i class="icon-add-cart"></i></a>
-                                </div>
-                            </div>
-                            <div class="catalog-banner" style="background: url(images/catalog-banner.png) no-repeat">
-                                <a href="#">
-                                    <div class="catalog-banner__info">
-                                        <p class="catalog-banner__title">Часы для спорта</p>
-                                        <p class="catalog-banner__btn">Смотреть</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="banner-horizontal hide-mb" style="
-                         background: url(images/banner-horizontal.png) no-repeat #fefa94;
-                         background-size: cover;
-                         background-position: center bottom;
-                         ">
-                        <a href="#">
-                            <div class="banner-horizontal__info">
-                                <p class="banner-horizontal__title">При покупке женских часов<br>браслет в подарок</p>
-                                <p class="banner-horizontal__btn">Подробнее</p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </a>
                     </div>
                     <div class="subscribe-block">
                         <div class="subscribe">
