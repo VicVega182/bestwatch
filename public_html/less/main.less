@@ -722,6 +722,17 @@ input, select, textarea, button {
 header {
     padding: 0 40px;
     position: relative;
+    &.empty-header {
+        padding-bottom: 50px;
+        border-bottom: 1px solid @gray;
+        .header-first {
+            .header-first__left {
+                .header-phone {
+                    padding: 0;
+                }
+            }
+        }
+    }
     @media @mb {
         padding: 0;
     }
@@ -1555,6 +1566,14 @@ footer {
             }
         }
     }
+    &.empty-footer {
+        .footer-information {
+            padding: 0;
+            .footer-information__left {
+                width: 100%;
+            }
+        }
+    }
 }
 .footer-last {
     background: @fborder;
@@ -1584,6 +1603,10 @@ footer {
     .content-left {
         flex-basis: 89.43%;
         border-right: 1px solid @gray;
+        &.empty-side {
+            flex-basis: 100%;
+            border-right: none;
+        }
         @media @mb {
             width: 100%;
             border-right: none;
@@ -1614,6 +1637,242 @@ footer {
         }
     }
 }
+
+/* Корзина */
+
+.cart {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 50px;
+    .cart-header {
+        h1 {
+            font-family: 'PSB';
+            font-size: 30px;
+            line-height: 1.2;
+            color: @black;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            width: ~'calc(100% - 145px)';
+        }
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 13px;
+            color: @black;
+            text-decoration: underline;
+        }
+    }
+    .cart-body {
+        letter-spacing: -0.3em;
+        padding: 25px 0 0 0;
+        .cart-body__left, .cart-body__right {
+            display: inline-block;
+            vertical-align: top;
+            letter-spacing: normal;
+        }
+        .cart-body__left {
+            width: 63.19%;
+            margin-right: 4.185%;
+            .cart-catalog__item {
+                letter-spacing: -0.3em;
+                border-bottom: 1px solid @gray;
+                padding: 15px 0;
+                &:first-child {
+                    border-top: 1px solid @gray;
+                }
+                & > div {
+                    display: inline-block;
+                    vertical-align: middle;
+                    letter-spacing: normal;
+                }
+                .cart-catalog__item__img {
+                    max-width: 100px;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                .cart-catalog__item__count {
+                    width: 80px;
+                    border-radius: 8px;
+                    border: solid 1px @gray;
+                    text-align: center;
+                    padding: 6px 7px;
+                    letter-spacing: -0.3em;
+                    input {
+                        border: none;
+                        font-size: 13px;
+                        line-height: 1.62;
+                        color: @black;
+                        text-align: center;
+                        width: ~'calc(100% - 34px)';
+                        display: inline-block;
+                        vertical-align: middle;
+                        letter-spacing: normal;
+                    }
+                    span {
+                        width: 17px;
+                        height: 17px;
+                        border: solid 1px @gray;
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: @dkgr;
+                        border-radius: 50%;
+                        line-height: 13px;
+                        font-size: 13px;
+                        text-align: center;
+                        letter-spacing: normal;
+                        cursor: pointer;
+                        &:last-child {
+                            line-height: 14px;
+                        }
+                    }
+                }
+                .cart-catalog__item__remove {
+                    width: 36px;
+                    a {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 36px;
+                        height: 36px;
+                        border: 1px solid @gray;
+                        border-radius: 50%;
+                        line-height: 36px;
+                        color: @dkgr;
+                        font-size: 13px;
+                        text-align: center;
+                        &:hover {
+                            color: @red;
+                            border-color: @red;
+                        }
+                    }
+                }
+                .cart-catalog__item__price {
+                    width: 164px;
+                    padding: 0 30px;
+                    p {
+                        margin: 0;
+                        &.cart-item__price {
+                            font-size: 18px;
+                            font-weight: 700;
+                            letter-spacing: 0.5px;
+                            color: @black;
+                            i {
+                                font-size: 15px;
+                            }
+                        }
+                        &.cart-item__price__quote {
+                            font-size: 13px;
+                            letter-spacing: 0.5px;
+                            color: @dkgr;
+                            i {
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+                .cart-catalog__item__name {
+                    width: ~'calc(100% - 380px)';
+                    padding: 0 30px;
+                    p {
+                        margin: 0;
+                        &.cart-item__code {
+                            font-size: 15px;
+                            text-transform: uppercase;
+                            color: @dkgr;
+                        }
+                        &.cart-item__name {
+                            font-size: 15px;
+                            color: @black;
+                        }
+                    }
+                }
+            }
+        }
+        .cart-body__right {
+            width: 28.44%;
+            border: 1px solid @gray;
+            padding: 30px 20px;
+            .nav-tabs {
+                border: none;
+                li {
+                    & + li {
+                        margin-left: 20px;
+                    }
+                    border: none;
+                    padding: 0;
+                    a {
+                        border: none;
+                        padding: 0;
+                        border-bottom: 2px dotted @gray;
+                        font-size: 15px;
+                        color: @dkgr;
+                        &:hover {
+                            background: transparent;
+                            color: @black;
+                            border-color: @black;
+                        }
+                    }
+                    &.active {
+                        a {
+                            border-bottom: 2px solid @black;
+                            color: @black;
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                .inside {
+                    padding-top: 18px;
+                    .dropdown {
+                        width: 100%;
+                        button {
+                            width: 100%;
+                            position: relative;
+                            text-align: left;
+                            background: transparent;
+                            border: 1px solid @gray;
+                            box-shadow: none;
+                            border-radius: 8px;
+                            height: 36px;
+                            padding: 0 9px;
+                            font-size: 13px;
+                            color: @black;
+                            i.icon-rub-lite {
+                                font-size: 11px;
+                            }
+                            i.icon-arrow-dd {
+                                font-size: 8px;
+                                right: 16px;
+                                top: 50%;
+                                margin-top: -4px;
+                                position: absolute;
+                            }
+                        }
+                        .dropdown-menu {
+                            width: 100%;
+                            padding: 10px;
+                            box-shadow: none;
+                            border: 1px solid @gray;
+                            border-radius: 8px;
+                            li {
+                                padding: 5px 0;
+                                font-size: 13px;
+                                color: @black;
+                                i.icon-rub-lite {
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Корзина end */
+
 .banner-slider {
     display: flex;
     align-content: stretch;
@@ -2647,6 +2906,33 @@ footer {
             display: inline-block;
             vertical-align: middle;
         }
+        .card-labels {
+            letter-spacing: normal;
+            display: block;
+            @media @mb {
+                padding: 20px 16px 0;
+            }
+            .card-label {
+                border-radius: 4px;
+                border: 1px solid transparent;
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 3px 5px;
+                font-size: 11px;
+                font-weight: bold;
+                @media @mb {
+                    font-size: 8px;
+                }
+                &.label-new {
+                    color: @blue;
+                    border-color: @blue;
+                }
+                &.label-lider {
+                    color: @green;
+                    border-color: @green;
+                }
+            }
+        }
         .card-body__left {
             letter-spacing: -0.3em;
             width: 35%;
@@ -2762,6 +3048,29 @@ footer {
                 @media @mb {
                     width: 100%;
                     padding: 0 85px;
+                    margin: 20px 0;
+                    position: relative;
+                    .slick-slider {
+                        position: static;
+                    }
+                    .slick-next, .slick-prev {
+                        border: none;
+                        background: transparent;
+                    }
+                    .slick-next {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: rotate(270deg);
+                        margin-top: -10px;
+                    }
+                    .slick-prev {
+                        position: absolute;
+                        left: 10px;
+                        top: 50%;
+                        transform: rotate(90deg);
+                        margin-top: -10px;
+                    }
                 }
                 .card-slider__for {
                     .slick-slide {
@@ -2781,6 +3090,10 @@ footer {
                 padding: 30px 0;
                 border-left: 1px solid @gray;
             }
+            @media @mb {
+                width: 100%;
+                border: none;
+            }
         }
         .card-body__center {
             width: 65%;
@@ -2792,12 +3105,25 @@ footer {
                 width: 100%;
                 padding: 0 20px 40px;
             }
+            @media @mb {
+                width: 100%;
+                padding: 0;
+            }
+            .card-body__info {
+                @media @mb {
+                    padding: 0 16px;
+                }
+            }
             .card-name {
                 margin: 0;
                 font-family: 'PSB';
                 font-size: 30px;
                 line-height: 1.33;
                 color: @black;
+                @media @mb {
+                    font-size: 18px;
+                    display: inline-block;
+                }
             }
             .card-model {
                 margin: 0;
@@ -2805,6 +3131,10 @@ footer {
                 font-size: 24px;
                 line-height: 1.33;
                 color: @black;
+                @media @mb {
+                    font-size: 18px;
+                    display: inline-block;
+                }
             }
             .card-code {
                 font-family: 'PSB';
@@ -2813,6 +3143,14 @@ footer {
                 color: @dkgr;
                 text-transform: uppercase;
                 margin-bottom: 20px;
+                @media @mb {
+                    font-size: 11px;
+                }
+            }
+            .card-body__prices {
+                @media @mb {
+                    padding: 0 16px;
+                }
             }
             .card-oldprice {
                 font-size: 18px;
@@ -2874,6 +3212,10 @@ footer {
             }
             .card-buy {
                 margin-top: 30px;
+                @media @mb {
+                    padding: 30px 16px 20px;
+                    margin-top: 0;
+                }
                 .card-buy__cart {
                     border-radius: 42px;
                     background-color: @red;
@@ -2895,6 +3237,9 @@ footer {
                     letter-spacing: 0.5px;
                     text-align: center;
                     padding: 9px 26px;
+                    @media @mb {
+                        padding: 9px 14px;
+                    }
                     @media @xs {
                         padding: 9px 10px;
                     }
@@ -2909,30 +3254,13 @@ footer {
             @media @tab {
                 width: 100%;
             }
+            @media @mb {
+                width: 100%;
+            }
             .card-labels {
                 margin-bottom: 26px;
                 @media @tab {
                     padding: 0 20px;
-                }
-                &.empty {
-                    display: none;
-                }
-                .card-label {
-                    border-radius: 4px;
-                    border: 1px solid transparent;
-                    display: inline-block;
-                    text-transform: uppercase;
-                    padding: 3px 5px;
-                    font-size: 11px;
-                    font-weight: bold;
-                    &.label-new {
-                        color: @blue;
-                        border-color: @blue;
-                    }
-                    &.label-lider {
-                        color: @green;
-                        border-color: @green;
-                    }
                 }
             }
             .card-chipest {
@@ -2941,6 +3269,11 @@ footer {
                 @media @tab {
                     padding: 0 20px 20px;
                     border-bottom: 1px solid @gray;
+                }
+                @media @mb {
+                    padding: 20px 16px;
+                    border-bottom: 1px solid @gray;
+                    border-top: 1px solid @gray;
                 }
                 &.empty {
                     display: none;
@@ -2969,10 +3302,16 @@ footer {
             }
             .card-delivery {
                 margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 30px;
+                }
                 @media @tab {
                     padding: 0 20px;
                     display: inline-block;
                     vertical-align: middle;
+                }
+                @media @mb {
+                    padding: 0 16px;
                 }
                 a {
                     display: block;
@@ -2993,6 +3332,185 @@ footer {
                             font-size: 10px;
                             display: inline-block;
                             line-height: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .card-footer__mobile {
+        background: @litebg;
+        display: none;
+        @media @mb {
+            display: block;
+        }
+        .panel-group {
+            .panel + .panel {
+                margin-top: 0;
+            }
+            .panel {
+                border: none;
+                border-radius: 0;
+                background: transparent;
+                border-bottom: 1px solid @gray;
+                .panel-heading {
+                    border: none;
+                    background: transparent;
+                    h4 {
+                        color: @black;
+                        a {
+                            font-family: 'PSB';
+                            font-size: 11px;
+                            letter-spacing: 1px;
+                            color: @black;
+                            text-transform: uppercase;
+                            display: block;
+                            position: relative;
+                            padding: 6px 0 3px;
+                            line-height: 11px;
+                            i {
+                                font-size: 8px;
+                                position: absolute;
+                                right: 16px;
+                                top: 50%;
+                                margin-top: -4px;
+                                transform: rotate(180deg);
+                            }
+                            &.collapsed {
+                                i {
+                                    transform: rotate(0);
+                                }
+                            }
+                        }
+                    }
+                }
+                .panel-collapse {
+                    .panel-body {
+                        border: none;
+                        h4 {
+                            font-family: 'PSB';
+                            font-size: 14px;
+                            color: @black; 
+                            margin: 0 0 16px;
+                        }
+                        .left {
+                            margin-bottom: 20px;
+                            ul {
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                                li {
+                                    font-size: 13px;
+                                    line-height: 1.4;
+                                    margin-bottom: 15px;
+                                    .desc-name {
+                                        color: @dkgr;
+                                        span {
+                                            background: @litebg;
+                                            display: inline-block;
+                                            padding-right: 10px;
+                                        }
+                                    }
+                                    .desc-text {
+                                        color: @black;
+                                    }
+                                }
+                            }
+                        }
+                        .right {
+                            p {
+                                font-size: 13px;
+                                line-height: 1.53;
+                                color: @black;
+                            }
+                        }
+                        .card-stock {
+                            .quote {
+                                font-size: 13px;
+                                line-height: 1.62;
+                                color: @black;
+                                margin: 0;
+                                i {
+                                    font-size: 10px;
+                                }
+                            }
+                            .card-stock__list {
+                                width: 100%;
+                                margin-top: 20px;
+                                .card-stock__list__body {
+                                    letter-spacing: -0.3em;
+                                    .card-stock__row {
+                                        border-bottom: 1px solid @gray;
+                                        padding: 10px 0 20px;
+                                        div {
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            letter-spacing: normal;
+                                            width: 100%;
+                                            color: @black;
+                                            font-size: 13px;
+                                            line-height: 1.62;
+                                            &:nth-child(2) {
+                                                font-weight: 700;
+                                                font-size: 15px;
+                                            }
+                                            i {
+                                                display: inline-block;
+                                                width: 18px;
+                                                height: 18px;
+                                                border-radius: 50%;
+                                                font-style: normal;
+                                                color: @white;
+                                                vertical-align: middle;
+                                                text-transform: uppercase;
+                                                font-size: 9px;
+                                                text-align: center;
+                                                line-height: 18px;
+                                                &.blue {
+                                                    background: @blue;
+                                                }
+                                                &.red {
+                                                    background: @red;
+                                                }
+                                                &.orange {
+                                                    background: orange;
+                                                }
+                                                &.purple {
+                                                    background: purple;
+                                                }
+                                                &.green {
+                                                    background: @green;
+                                                }
+                                            }
+                                            .red-btn {
+                                                border-radius: 42px;
+                                                background-color: @red;
+                                                display: inline-block;
+                                                color: #fff;
+                                                text-transform: uppercase;
+                                                font-size: 10px;
+                                                font-weight: 700;
+                                                letter-spacing: 0.5px;
+                                                text-align: center;
+                                                padding: 6px 20px;
+                                                margin-top: 10px;
+                                                @media @tab {
+                                                    padding: 9px;
+                                                    background: transparent;
+                                                    color: @red;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .card-about {
+                            p {
+                                font-size: 13px;
+                                line-height: 1.53;
+                                color: @black;
+                            }
                         }
                     }
                 }
@@ -3218,6 +3736,11 @@ footer {
     }
 }
 .catalog {
+    &.in-card {
+        @media @mb {
+            padding-bottom: 40px;
+        }
+    }
     &.main {
         @media @mb {
             background: @litebg;
@@ -3359,6 +3882,252 @@ footer {
                     }
                     h1, span {
                         display: inline-block;
+                    }
+                }
+            }
+        }
+        .brand-slider {
+            .brand-slider__title {
+                border: 1px solid @gray;
+                border-right: none;
+                padding: 30px 40px;
+                position: relative;
+                &:before, &:after {
+                    top: 100%;
+                    left: 50%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    z-index: 1;
+                }
+                &:after {
+                    border-color: rgba(255, 255, 255, 0);
+                    border-top-color: #fff;
+                    border-width: 10px;
+                    margin-left: -10px;
+                }
+                &:before {
+                    border-color: rgba(225, 225, 225, 0);
+                    border-top-color: #e1e1e1;
+                    border-width: 11px;
+                    margin-left: -11px;
+                }
+                @media @mb {
+                    padding: 20px 16px;
+                }
+                h3 {
+                    font-family: 'PSB';
+                    font-size: 24px;
+                    color: @black;
+                    margin: 0;
+                }
+                .brand-slider__control {
+                    position: absolute;
+                    right: 40px;
+                    top: 50%;
+                    margin-top: -18px;
+                    @media @mb {
+                        position: static;
+                        margin: 10px 0 0 0;
+                    }
+                    button {
+                        border: 1px solid @black;
+                        color: @black;
+                        display: inline-block;
+                        vertical-align: middle;
+                        border-radius: 50%;
+                        width: 36px;
+                        height: 36px;
+                        background: @white;
+                        line-height: 10px;
+                        margin: 0 6px;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .slick-track {
+                display: flex;
+                .slick-slide {
+                    flex-basis: 60%;
+                    text-align: center;
+                    background-color: rgba(0,0,0,0.4)!important;
+                    background-blend-mode: multiply!important;
+                    padding: 0px 40px;
+                    display: flex;
+                    align-items: center;
+                    min-height: 340px;
+                    @media @mb {
+                        flex-basis: 90%;
+                    }
+                    .brand-slider__type {
+                        display: inline-block;
+                        font-size: 11px;
+                        font-weight: 700;
+                        letter-spacing: 0.5px;
+                        color: @white;
+                        text-transform: uppercase;
+                        border: 1px solid @white;
+                        margin: 20px 30px;
+                        padding: 2px 5px;
+                        border-radius: 4px;
+                        position: relative;
+                        z-index: 1;
+                        margin-bottom: 10px;
+                    }
+                    .brand-slider__name {
+                        font-family: 'PSB';
+                        font-size: 24px;
+                        line-height: 1.25;
+                        color: @white;
+                    }
+                }
+            }
+        }
+        .brand-description {
+            letter-spacing: -0.3em;
+            border-left: 1px solid @gray;
+            .left {
+                display: inline-block;
+                vertical-align: top;
+                letter-spacing: normal;
+                width: 100%;
+                @media @xlg {
+                    border-right: 1px solid @gray;
+                }
+                .brand-description__container {
+                    max-width: 700px;
+                    margin: 0 auto;
+                    padding: 40px 0;
+                    @media @mb {
+                        padding: 40px 16px;
+                    }
+                    @media @tab {
+                        padding: 40px;
+                    }
+                    @media @xs {
+                        padding: 40px;
+                    }
+                    img {
+                        max-width: 100%;
+                    }
+                    h1, h2, h3, h4, h5 {
+                        font-family: 'PSB';
+                        color: @black;
+                    }
+                    h2 {
+                        font-size: 24px;
+                        margin: 0 0 30px 0;
+                        @media @mb {
+                            font-size: 20px;
+                        }
+                    }
+                    h3 {
+                        font-size: 20px;
+                        margin: 25px 0 14px;
+                        @media @mb {
+                            font-size: 18px;
+                        }
+                    }
+                    h4 {
+                        font-size: 18px;
+                        @media @mb {
+                            font-size: 16px;
+                        }
+                    }
+                    img {
+                        margin-bottom: 10px;
+                    }
+                    blockquote {
+                        font-size: 22px;
+                        font-weight: 300;
+                        line-height: 1.45;
+                        color: @dkgr;
+                        padding: 0;
+                        border: none;
+                        margin: 0 0 40px 0;
+                        @media @mb {
+                            font-size: 20px;
+                        }
+                    }
+                    p {
+                        font-size: 18px;
+                        line-height: 1.56;
+                        color: @black;
+                        margin-bottom: 30px;
+                        @media @mb {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                @media @xlg {
+                    width: 80%;
+                }
+            }
+            .right {
+                display: none;
+                @media @xlg {
+                    display: inline-block;
+                    vertical-align: top;
+                    letter-spacing: normal;
+                    width: 20%;
+                }
+                .brand-news__side {
+                    .brand-news__item {
+                        .brand-news__img {
+                            height: 146px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .brand-news__type {
+                            display: inline-block;
+                            font-size: 11px;
+                            font-weight: 700;
+                            letter-spacing: 0.5px;
+                            color: @dkgr;
+                            text-transform: uppercase;
+                            border: 1px solid @gray;
+                            margin: 20px 30px;
+                            padding: 2px 5px;
+                            border-radius: 4px;
+                            position: relative;
+                            z-index: 1;
+                            margin-bottom: 10px;
+                        }
+                        .brand-news__title {
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: 1.46;
+                            color: @black;
+                            margin: 0 30px 40px;
+                        }
+                    }
+                }
+                .brand-catalog__side {
+                    .catalog {
+                        .catalog-list {
+                            .catalog-item {
+                                width: 100%;
+                                border-right: none;
+                                border-left: none;
+                                &:first-child {
+                                    border-top: 1px solid @gray;
+                                }
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+                            }
+                        }
                     }
                 }
             }
