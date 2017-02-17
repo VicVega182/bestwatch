@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Корзина</title>
+        <title>Оформление заказа</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -93,120 +93,186 @@
                 <div class="wrapper">
                     <div class="cart">
                         <div class="cart-header">
-                            <h1>Корзина</h1>
-                            <a href="#">Вернуться к покупкам</a>
+                            <h1>Оформление заказа</h1>
+                            <a href="#">Вернуться в корзину</a>
                         </div>
                         <div class="cart-body">
                             <div class="cart-body__left">
-                                <div class="cart-catalog">
-                                    <div class="cart-catalog__item">
-                                        <div class="cart-catalog__item__img">
-                                            <img src="images/exclusive.png">
+                                <div class="checkout-user checkout-block">
+                                    <div class="left">
+                                        <div class="checkout-body__header">
+                                            <h3>Новый клиент</h3>
                                         </div>
-                                        <div class="cart-catalog__info">
-                                            <div class="cart-catalog__item__name">
-                                                <p class="cart-item__code">Skw6306</p>
-                                                <p class="cart-item__name"><b>Skagen</b> Leather</p>
+                                        <form action="">
+                                            <div class="form-group">
+                                                <label for="check-name">ФИО</label>
+                                                <input type="text" class="form-control" id="check-name">
                                             </div>
-                                            <div class="cart-catalog__item__count">
-                                                <div class="cart-js__number">
-                                                    <span class="cart-js__minus">-</span>
-                                                    <input type="text" value="1" size="5" class='cart-js__input'/>
-                                                    <span class="cart-js__plus">+</span>
+                                            <div class="form-group">
+                                                <label for="check-mail">E-mail</label>
+                                                <input type="email" class="form-control" id="check-mail">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="check-phone">Телефон</label>
+                                                <input type="text" class="form-control" id="check-phone">
+                                            </div>
+                                        </form>
+                                    </div> 
+                                    <div class="right">
+                                        <div class="checkout-body__header">
+                                            <h3>Уже зарегистрирован</h3>
+                                        </div>
+                                        <a href="#" class="black-empty-btn">Войти</a>
+                                        <div class="checkout-social">
+                                            <p>Войти через соцсети</p>
+                                            <a href="#"><i class="icon-google"></i></a>
+                                            <a href="#"><i class="icon-vk"></i></a>
+                                            <a href="#"><i class="icon-twitter"></i></a>
+                                            <a href="#"><i class="icon-fb"></i></a>
+                                            <a href="#"><i class="icon-ok"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-delivery checkout-block">
+                                    <div class="checkout-body__header">
+                                        <h3>Способ получения заказа в городе</h3><a href="#" data-toggle="modal" data-target="#cityChange">Санкт-Петербурге <i class="icon-arrow-dd"></i></a>
+                                    </div>
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active"><a href="#checkPickup" aria-controls="checkPickup" role="tab" data-toggle="tab">Самовывоз</a></li>
+                                        <li role="presentation"><a href="#checkDelivery" aria-controls="checkDelivery" role="tab" data-toggle="tab">Доставка</a></li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="checkPickup">
+                                            <div class="inside">
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-primary active">
+                                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Восстания д.1
+                                                    </label>
+                                                    <label class="btn btn-primary">
+                                                        <input type="radio" name="options" id="option2" autocomplete="off"> Фуражный д.3
+                                                    </label>
+                                                    <label class="btn btn-primary">
+                                                        <input type="radio" name="options" id="option3" autocomplete="off"> Камышовая д.6
+                                                    </label>
                                                 </div>
                                             </div>
-                                            <div class="cart-catalog__item__price">
-                                                <p class="cart-item__price"><span class='cart-js__total'>7595</span> <i class="icon-rub"></i></p>
-                                                <p class="cart-item__price__quote"><span class='cart-js__count'>1</span> шт. × <span class='cart-js__price'>7595</span> <i class="icon-rub-lite"></i></p>
-                                            </div>
-                                            <div class="cart-catalog__item__remove">
-                                                <a href="#"><i class="icon-close"></i></a>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="checkDelivery">
+                                            <div class="inside">
+                                                <div class="btn-group" data-toggle="buttons">
+                                                    <label class="btn btn-primary active">
+                                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Восстания д.1
+                                                    </label>
+                                                    <label class="btn btn-primary">
+                                                        <input type="radio" name="options" id="option2" autocomplete="off"> Фуражный д.3
+                                                    </label>
+                                                    <label class="btn btn-primary">
+                                                        <input type="radio" name="options" id="option3" autocomplete="off"> Камышовая д.6
+                                                    </label>
+                                                </div>
+                                                <div class="checkout-address">
+                                                    <p>Адрес доставки</p>
+                                                    <input type="text" placeholder="Улица, дом, корпус, квартира">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="cart-catalog__item">
-                                        <div class="cart-catalog__item__img">
-                                            <img src="images/exclusive.png">
-                                        </div>
-                                        <div class="cart-catalog__info">
-                                            <div class="cart-catalog__item__name">
-                                                <p class="cart-item__code">Skw6306</p>
-                                                <p class="cart-item__name"><b>Skagen</b> Leather</p>
-                                            </div>
-                                            <div class="cart-catalog__item__count">
-                                                <div class="cart-js__number">
-                                                    <span class="cart-js__minus">-</span>
-                                                    <input type="text" value="1" size="5" class='cart-js__input'/>
-                                                    <span class="cart-js__plus">+</span>
-                                                </div>
-                                            </div>
-                                            <div class="cart-catalog__item__price">
-                                                <p class="cart-item__price"><span class='cart-js__total'>7595</span> <i class="icon-rub"></i></p>
-                                                <p class="cart-item__price__quote"><span class='cart-js__count'>1</span> шт. × <span class='cart-js__price'>7595</span> <i class="icon-rub-lite"></i></p>
-                                            </div>
-                                            <div class="cart-catalog__item__remove">
-                                                <a href="#"><i class="icon-close"></i></a>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="checkout-pay checkout-block">
+                                    <div class="checkout-body__header">
+                                        <h3>Способ оплаты</h3>
                                     </div>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Восстания д.1
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> Фуражный д.3
+                                        </label>
+                                        <label class="btn btn-primary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off"> Камышовая д.6
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkout-comment checkout-block">
+                                    <div class="checkout-body__header">
+                                        <h3>Комментарий к заказу</h3>
+                                    </div>
+                                    <textarea name="comment" id="comment" rows="8" placeholder="Укажите на что обратить внимание при оформлении или доставке вашего заказа"></textarea>
                                 </div>
                             </div>
                             <div class="cart-body__right">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation"><a class="free" href="#cartPickup" aria-controls="cartPickup" role="tab" data-toggle="tab">Самовывоз</a></li>
-                                    <li role="presentation" class="active"><a href="#cartDelivery" aria-controls="cartDelivery" role="tab" data-toggle="tab">Доставка</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane" id="cartPickup">
-                                        <div class="inside">
-
+                                <div class="checkout-cart">
+                                    <h4>Состав заказа</h4>
+                                    <div class="checkout-cart__item">
+                                        <div class="checkout-cart__item__image">
+                                            <img src="images/exclusive.png">
+                                        </div>
+                                        <div class="checkout-cart__item__desc">
+                                            <p class="checkout-cart__item__name">Skagen Leather SKW6306</p>
+                                            <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
                                         </div>
                                     </div>
-                                    <div role="tabpanel" class="tab-pane active" id="cartDelivery">
-                                        <div class="inside">
-                                            <div class="dropdown cartDeliveryDD">
-                                                <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="button-paste">Выберите вариант доставки</span>
-                                                    <i class="icon-arrow-dd"></i>
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                                    <li data-price="2000"><b>Гарантпост</b> | 1—3 дня | 2000 <i class="icon-rub-lite"></i></li>
-                                                    <li data-price="3000"><b>Гарантпост</b> | 1—3 дня | 3000 <i class="icon-rub-lite"></i></li>
-                                                    <li data-price="4000"><b>Гарантпост</b> | 1—3 дня | 4000 <i class="icon-rub-lite"></i></li>
-                                                    <li data-price="5000"><b>Гарантпост</b> | 1—3 дня | 5000 <i class="icon-rub-lite"></i></li>
-                                                </ul>
+                                    <div class="collapse" id="collapseCheckout">
+                                        <div class="checkout-cart__item">
+                                            <div class="checkout-cart__item__image">
+                                                <img src="images/exclusive.png">
                                             </div>
-                                            <div class="cart-delivery__quote">
-                                                <p>Указана стоимость доставки за 1 единицу товара весом от 0,5 до 1 кг. Точную стоимость доставки уточняйте у менеджера.</p>
-                                                <p>Сроки доставки могут меняться в зависимости от пункта назначения.</p>
+                                            <div class="checkout-cart__item__desc">
+                                                <p class="checkout-cart__item__name">Skagen Leather SKW6306</p>
+                                                <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
                                             </div>
                                         </div>
+                                        <div class="checkout-cart__item">
+                                            <div class="checkout-cart__item__image">
+                                                <img src="images/exclusive.png">
+                                            </div>
+                                            <div class="checkout-cart__item__desc">
+                                                <p class="checkout-cart__item__name">Skagen Leather SKW6306</p>
+                                                <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
+                                            </div>
+                                        </div>
+                                        <div class="checkout-cart__item">
+                                            <div class="checkout-cart__item__image">
+                                                <img src="images/exclusive.png">
+                                            </div>
+                                            <div class="checkout-cart__item__desc">
+                                                <p class="checkout-cart__item__name">Skagen Leather SKW6306</p>
+                                                <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="checkout-cart__showall" role="button" data-toggle="collapse" href="#collapseCheckout" aria-expanded="false" aria-controls="collapseExample">
+                                        Показать все
+                                    </a>
+                                </div>
+                                <div class="checkout-delivery__info">
+                                    <h4>Способ доставки и оплаты</h4>
+                                    <div>
+                                        <span>Доставка:</span>
+                                        <span class="black check-js__delivery">Восстания д.1</span>
+                                    </div>
+                                    <div>
+                                        <span>Оплата:</span>
+                                        <span class="black check-js__pay">Восстания д.1</span>
                                     </div>
                                 </div>
-                                <div class="cart-delivery__total">
-                                    <div class="cart-delivery__total__delivery">
-                                        <div>Стоимость доставки</div>
-                                        <div>
-                                            <span>0</span> <i class="icon-rub-lite"></i>
-                                        </div>
+                                <div class="checkout-delivery__order">
+                                    <div>
+                                        <span>Стоимость доставки</span>
+                                        <span>1963 <i class="icon-rub"></i></span>
                                     </div>
-                                    <div class="cart-delivery__total__summ">
-                                        <div>Стоимость заказа</div>
-                                        <div>
-                                            <span>22 595</span> <i class="icon-rub-lite"></i>
-                                        </div>
+                                    <div>
+                                        <span>Сумма заказа</span>
+                                        <span>30 180 <i class="icon-rub"></i></span>
                                     </div>
-                                    <div class="cart-delivery__total__all">
-                                        <div>Итого</div>
-                                        <div>
-                                            <span>22 595</span> <i class="icon-rub"></i>
-                                        </div>
+                                    <div class="all">
+                                        <span>Итого</span>
+                                        <span>30 180 <i class="icon-rub"></i></span>
                                     </div>
-                                </div>
-                                <a href="#" class="red-btn">Оформить заказ</a>
-                                <div class="cart-promocode">
-                                    <input type="text" placeholder="Использовать промокод">
-                                    <input type="submit" value="Ok">
+                                    <a href="#" class="red-btn">Завершить оформление</a>
                                 </div>
                             </div>
                         </div>
