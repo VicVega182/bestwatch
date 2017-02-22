@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Видеообзоры</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- STYLE START -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="css/drawer.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/pietimer.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- STYLE END -->
+
+        <!-- JS START -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <script src="js/device.min.js"></script>
+        <script src="js/iscroll.js"></script>
+        <script src="js/drawer.js"></script>
+        <script src="js/jquery.matchHeight.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/jquery.pietimer.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/main.js"></script>
+        <!-- JS END -->
+    </head>
+    <body class="drawer drawer--left">
+        <div class="mobile-menu">
+            <div class="mobile-menu__container">
+                <div class="mobile-menu__header">
+                    <a href="#" class="like right-open"><i class="icon-heart-o"><span class="counter">16</span></i></a>
+                    <a href="#" class="eye right-open"><i class="icon-eye"><span class="counter">158</span></i></a>  
+                    <a href="#" class="close-menu menu-mobile__hide"><i class="icon-close"></i></a>
+                </div>
+                <div class="mobile-menu__body">
+                    <a href="#" class="city-change" data-toggle="modal" data-target="#cityChange">Санкт-Петербург <i class="icon-arrow-dd"></i></a>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Магазины</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                            <li><a href="#">Возврат</a></li>
+                            <li><a href="#">Кредит</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Видеообзоры</a></li>
+                        </ul>
+                    </nav>
+                    <div class="info-block">
+                        <a href="#" data-toggle="modal" data-target="#login"><i class="icon-user"></i> Войти</a>
+                        <a href="#" data-toggle="modal" data-target="#registration" class="quote">Регистрация</a>
+                    </div>
+                    <div class="info-block">
+                        <a href="#"><i class="icon-pencil"></i> Задать вопрос</a>
+                    </div>
+                    <div class="info-block">
+                        <a href="tel:+78128002332"><i class="icon-phone"></i> +7 812 800 23 32</a>
+                        <span class="quote">с 8:30 до 23:00</span>
+                    </div>
+                    <div class="info-block">
+                        <a href="tel:+78008002332"><i class="icon-phone"></i> 8 800 800 23 32</a>
+                        <span class="quote">Круглосуточно</span>
+                    </div>
+                </div>
+                <div class="mobile-menu__footer">
+                    <a href="#"><i class="icon-google"></i></a>
+                    <a href="#"><i class="icon-insta"></i></a>
+                    <a href="#"><i class="icon-vk"></i></a>
+                    <a href="#"><i class="icon-twitter"></i></a>
+                    <a href="#"><i class="icon-fb"></i></a>
+                    <a href="#"><i class="icon-ok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-catalog">
+            <div class="mobile-menu__container">
+                <div class="mobile-menu__header">
+                    <a href="#" class="close-catalog hidden"><i class="icon-arrow-left"></i></a>
+                    <a href="#" class="close-menu menu-catalog__hide"><i class="icon-close"></i></a>
+                </div>
+                <div class="mobile-menu__body">
+                    <h3 class="mobile__title">Каталог</h3>
+                    <nav class="catalog__nav catalog-first">
+                        <ul>
+                            <li><a href="#" data-nav="man">Мужские часы<i class="icon-arrow-dd"></i></a></li>
+                            <li><a href="#">Женские часы<i class="icon-arrow-dd"></i></a></li>
+                            <li><a href="#">Интерьерные часы<i class="icon-arrow-dd"></i></a></li>
+                            <li><a href="#">Другое<i class="icon-arrow-dd"></i></a></li>
+                            <li><a href="#" class="red">Sale</a></li>
+                        </ul>
+                    </nav>
+                    <div class="catalog-second man">
+                        <h3 class="mobile__title">Мужские часы</h3>
+                        <nav class="catalog__nav">
+                            <ul>
+                                <li><a href="#">Все</a></li>
+                                <li><a href="#">Страны<i class="icon-arrow-dd"></i></a></li>
+                                <li><a href="#">Стиль<i class="icon-arrow-dd"></i></a></li>
+                                <li><a href="#">Бренды<i class="icon-arrow-dd"></i></a></li>
+                                <li><a href="#">Корпус<i class="icon-arrow-dd"></i></a></li>
+                                <li class="free-border-bottom"><a href="#">Популярное<i class="icon-arrow-dd"></i></a></li>
+                            </ul>
+                        </nav>
+                        <div class="info-block">
+                            <a href="#" class="red"><i class="icon-sale"></i> Распродажа</a>
+                            <span class="quote">157 часов</span>
+                        </div>
+                        <div class="info-block">
+                            <a href="№"><i class="icon-star-empty"></i> Эксклюзив</a>
+                            <span class="quote">350 часов</span>
+                        </div>
+                        <div class="info-block">
+                            <a href="#"><i class="icon-like"></i> Рекомендуем</a>
+                            <span class="quote">1500 часов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-brand">
+            <div class="mobile-menu__container">
+                <div class="mobile-menu__header">
+                    <a href="#" class="close-menu menu-brand__hide"><i class="icon-close"></i></a>
+                </div>
+                <div class="mobile-menu__body">
+                    <h3 class="mobile__title">Бренды</h3>
+                    <nav class="brand__nav">
+                        <ul>
+                            <li><a class="first-letter" href="#"><span>A</span>Alba</a></li>
+                            <li><a href="#">Anonimo</a></li>
+                            <li><a class="first-letter" href="#"><span>B</span>Balmain</a></li>
+                            <li><a href="#">Blanchet</a></li>
+                            <li><a class="first-letter" href="#"><span>C</span>Candino</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <nav class="drawer-nav" role="navigation">
+            <a href="#" class="drawer-close drawer-toggle"><i class="icon-close"></i></a>
+            <div class="drawer-header">
+                <div class="drawer-header__first">
+                    <div class="drawer-header__left">
+                        <div class="dropdown">
+                            <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Санкт-Петербург
+                                <span class="icon-arrow-dd"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                <li><a href="#">Москва</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="drawer-header__right">
+                        <a href="#">Магазины</a>
+                    </div>
+                </div>
+                <div class="drawer-header__second">
+                    <div class="drawer-header__left">
+                        <p class="drawer-header__time">8:00-23:00</p>
+                        <a href="tel:+78128002332">+7 812 800 23 32</a>
+                    </div>
+                    <div class="drawer-header__left">
+                        <a href="tel:+78008002332">8 800 800 23 32</a>
+                    </div>
+                </div>
+            </div>
+            <div class="drawer-body">
+                <ul>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Возврат</a></li>
+                    <li><a href="#">Кредит</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Видеообзоры</a></li>
+                </ul>
+                <a href="#" class="gray-btn">Задать вопрос</a>
+                <div class="drawer-social">
+                    <a href="#"><i class="icon-google"></i></a>
+                    <a href="#"><i class="icon-insta"></i></a>
+                    <a href="#"><i class="icon-vk"></i></a>
+                    <a href="#"><i class="icon-twitter"></i></a>
+                    <a href="#"><i class="icon-fb"></i></a>
+                    <a href="#"><i class="icon-ok"></i></a>
+                </div>
+            </div>
+            <div class="drawer-footer">
+                <div class="banner-horizontal" style="background: url(images/hand.png) no-repeat">
+                    <a href="#">
+                        <div class="banner-horizontal__info">
+                            <p class="banner-horizontal__title">При покупке женских часов браслет в подарок</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="content-left">
+                <div class="header-shop hide-mb">
+                    <div class="header-shop__city">
+                        <i class="icon-spb"></i>
+                        <span>Магазины в <a href="#" data-toggle="modal" data-target="#cityChange">Санкт-Петербурге</a>:</span>
+                    </div>
+                    <div class="header-shop__list">
+                        <div class="header-shop__list__item first">
+                            <a href="#"><i class="icon-crown"></i>Невский атриум</a>
+                        </div>
+                        <div class="header-shop__list__item hide-tab">
+                            <a href="#">Континент</a>
+                        </div>
+                        <div class="header-shop__list__item hide-tab">
+                            <a href="#">Европолис</a>
+                        </div>
+                        <div class="header-shop__list__item hide-tab">
+                            <a href="#">Галерея</a>
+                        </div>
+                        <div class="header-shop__list__item hide-xs hide-tab">
+                            <a href="#">Мега Дыбенко</a>
+                        </div>
+                        <div class="header-shop__list__item hide-sm hide-xs hide-tab">
+                            <a href="#">Континент</a>
+                        </div>
+                        <div class="header-shop__list__item hide-sm hide-xs hide-tab">
+                            <a href="#">Европолис</a>
+                        </div>
+                        <div class="header-shop__list__item hide-md hide-sm hide-xs hide-tab">
+                            <a href="#">Галерея</a>
+                        </div>
+                        <div class="header-shop__list__item last">
+                            <a href="#">Еще 12 магазинов</a>
+                        </div>
+                    </div>
+                </div>
+                <header class="header">
+                    <div class="header-first"> <!-- Не выводить на телефонах -->
+                        <div class="header-first__left">
+                            <div class="header-menu">
+                                <a href="#" class="menu-mobile__open"><i class="icon-menu"></i></a>
+                                <a href="#" class="drawer-toggle hide-mb"><i class="icon-menu"></i></a>
+                            </div>
+                            <div class="header-phone hide-mb">
+                                <p>8:00 - 23:00</p>
+                                <a href="tel:+78128002332">+7 812 800 23 32</a>
+                            </div>
+                        </div>
+                        <div class="header-first__center">
+                            <a href="/">
+                                <img src="images/logo.svg">
+                                <p class="logo-quote hide-mb">Лучший выбор часов</p>
+                            </a>
+                        </div>
+                        <div class="header-first__right">
+                            <a href="#" class="header-login hide-mb" data-toggle="modal" data-target="#login"><i class="icon-user"></i><span>Войти</span></a>
+                            <div class="header-mobile__right">
+                                <a href="#"><i class="icon-search"></i></a>
+                                <a href="#"><i class="icon-cart"><span class="counter red">5</span></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-second hide-mb"> <!-- Не выводить на телефонах -->
+                        <div class="header-nav">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">Мужские часы</a>
+                                        <div class="header-submenu">
+                                            <div class="header-submenu__inside">
+                                                <div class="submenu">
+                                                    <nav>
+                                                        <ul>
+                                                            <li class="title"><a href="#">Страны</a></li>
+                                                            <li><a href="#">Швейцария</a></li>
+                                                            <li><a href="#">США</a></li>
+                                                            <li><a href="#">Германия</a></li>
+                                                            <li><a href="#">Япония</a></li>
+                                                            <li><a href="#">Россия</a></li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li class="title"><a href="#">Стиль</a></li>
+                                                            <li><a href="#">Повседневные</a></li>
+                                                            <li><a href="#">Классические</a></li>
+                                                            <li><a href="#">Дизайнерские</a></li>
+                                                            <li><a href="#">Спортивные</a></li>
+                                                            <li><a href="#">Военные</a></li>
+                                                            <li><a href="#">Яркие</a></li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li class="title"><a href="#">Бренды</a></li>
+                                                            <li><a href="#">Casio</a></li>
+                                                            <li><a href="#">G-Shock</a></li>
+                                                            <li><a href="#">Orient</a></li>
+                                                            <li><a href="#">Seiko</a></li>
+                                                            <li><a href="#">U-Boat</a></li>
+                                                            <li><a href="#" class="red">Все бренды</a></li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li class="title"><a href="#">Корпус</a></li>
+                                                            <li><a href="#">Золотые</a></li>
+                                                            <li><a href="#">Серебрянные</a></li>
+                                                            <li><a href="#">Титановые</a></li>
+                                                            <li><a href="#">Керамические</a></li>
+                                                            <li><a href="#">Деревянные</a></li>
+                                                        </ul>
+                                                        <ul>
+                                                            <li class="title"><a href="#">Популярные</a></li>
+                                                            <li><a href="#">Умные часы</a></li>
+                                                            <li><a href="#">Для спорта</a></li>
+                                                            <li><a href="#">Для туризма</a></li>
+                                                            <li><a href="#">Противоударные</a></li>
+                                                            <li><a href="#">Механические</a></li>
+                                                            <li><a href="#">Кварцевые</a></li>
+                                                            <li><a href="#">Электронные</a></li>
+                                                            <li><a href="#">Водонепроницаемые</a></li>
+                                                            <li><a href="#">Часы с видеообзорами</a></li>
+                                                        </ul>
+                                                    </nav>
+                                                    <div class="submenu-banner hide-tab hide-xs">
+                                                        <div class="banner-item">
+                                                            <div class="banner-item__left">
+                                                                <img src="images/watch.png">
+                                                                <span class="banner-item__sale">-35%</span>
+                                                            </div>
+                                                            <div class="banner-item__right">
+                                                                <div class="banner-timer">
+                                                                    <div class="banner-timer__counter">
+                                                                        <div class="counter-main"></div>
+                                                                    </div>
+                                                                    <div class="timer" data-countdown="2017/01/30"></div>
+                                                                </div>
+                                                                <p class="banner-item__articul">ES-0014-02</p>
+                                                                <span class="banner-item__brand">Michael Kors</span>
+                                                                <span class="banner-item__model">Kempton</span>
+                                                                <p class="banner-item__oldprice">4 562 990 <i class="icon-rub-lite"></i></p>
+                                                                <p class="banner-item__price">3 723 990 <i class="icon-rub"></i></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="submenu-footer">
+                                                <nav>
+                                                    <ul>
+                                                        <li><a href="#" class="red"><i class="icon-watch"></i>Все часы</a></li>
+                                                        <li><a href="#" class="red"><i class="icon-sale"></i>Распродажа</a></li>
+                                                        <li><a href="#"><i class="icon-brand"></i>Все бренды</a></li>
+                                                        <li><a href="#"><i class="icon-star-empty"></i>Эксклюзив</a></li>
+                                                        <li><a href="#"><i class="icon-like"></i>Рекомендуем</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">Женские часы</a></li>
+                                    <li><a href="#">Бренды</a></li>
+                                    <li><a href="#">Интерьерные часы</a></li>
+                                    <li><a href="#">Другое</a></li>
+                                    <li class="red"><a href="#">Sale</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header-search">
+                            <div class="header-search__inside">
+                                <form action="">
+                                    <input type="text">
+                                    <button type="submit"><i class="icon-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-mobile"> <!-- Не выводить на планшетах и ПК -->
+                        <nav>
+                            <ul>
+                                <li><a class="mobile-catalog__open" href="#">Каталог</a></li>
+                                <li><a class="mobile-brand__open" href="#">Бренды</a></li>
+                                <li><a href="#">Sale</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                <div class="wrapper">
+                    <div class="catalog">
+                        <div class="catalog-page">
+                            <div class="catalog-page__header empty-border__bottom">
+                                <ol class="breadcrumb">
+                                    <li><a href="#">Главная</a></li>
+                                    <li class="active">Мужские часы</li>
+                                </ol>
+                                <div class="catalog-page__header__second">
+                                    <div class="catalog-page__header__left">
+                                        <h1>Видеообзоры</h1>
+                                        <span class="page-header__counter">1780 видео</span>
+                                    </div>
+                                    <div class="catalog-page__header__right hide-tab hide-mb"> <!-- Не выводим на планшете и мобильном -->
+                                        <a href="#" class="active">По новизне <i class="icon-arrow-dd"></i></a>
+                                        <a href="#">По популярности <i class="icon-arrow-dd"></i></a>
+                                        <div class="dropdown">
+                                            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Бренд <i class="icon-arrow-dd"></i>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                <li><a href="#">Брэнд 1</a></li>
+                                                <li><a href="#">Брэнд 2</a></li>
+                                                <li><a href="#">Брэнд 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog-page__header__mobile news-sort"> <!-- Не выводить на ПК -->
+                                <div class="dropdown sortChange">
+                                    <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>По новизне</span> <i class="icon-arrow-dd"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#">По новизне</a></li>
+                                        <li><a href="#">По популярности</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="news-list">
+                                <div class="news-item">
+                                    <div class="news-item__img">
+                                        <div class="news-item__labels">
+                                            <span class="news-item__label time">1:37</span>
+                                            <span class="news-item__label stock"><i class="icon-cart"><b>Есть в наличии</b></i></span>
+                                        </div>
+                                        <a href="#">
+                                            <img src="images/banner-horizontal.png">
+                                        </a>
+                                    </div>
+                                    <div class="videos-item__name border-name">
+                                        <a href="#">
+                                            Обзор мужских часов Tissot T-Touch T013.420.47.201.00
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-item__img">
+                                        <div class="news-item__labels">
+                                            <span class="news-item__label time">1:37</span>
+                                            <span class="news-item__label stock"><i class="icon-cart"><b>Есть в наличии</b></i></span>
+                                        </div>
+                                        <a href="#">
+                                            <img src="images/banner-horizontal.png">
+                                        </a>
+                                    </div>
+                                    <div class="videos-item__name border-name">
+                                        <a href="#">
+                                            Обзор мужских часов Tissot T-Touch T013.420.47.201.00
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-item__img">
+                                        <div class="news-item__labels">
+                                            <span class="news-item__label time">1:37</span>
+                                            <span class="news-item__label stock"><i class="icon-cart"><b>Есть в наличии</b></i></span>
+                                        </div>
+                                        <a href="#">
+                                            <img src="images/banner-horizontal.png">
+                                        </a>
+                                    </div>
+                                    <div class="videos-item__name border-name">
+                                        <a href="#">
+                                            Обзор мужских часов Tissot T-Touch T013.420.47.201.00
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-item__img">
+                                        <div class="news-item__labels">
+                                            <span class="news-item__label time">1:37</span>
+                                            <span class="news-item__label stock"><i class="icon-cart"><b>Есть в наличии</b></i></span>
+                                        </div>
+                                        <a href="#">
+                                            <img src="images/banner-horizontal.png">
+                                        </a>
+                                    </div>
+                                    <div class="videos-item__name border-name">
+                                        <a href="#">
+                                            Обзор мужских часов Tissot T-Touch T013.420.47.201.00
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-item__img">
+                                        <div class="news-item__labels">
+                                            <span class="news-item__label time">1:37</span>
+                                            <span class="news-item__label stock"><i class="icon-cart"><b>Есть в наличии</b></i></span>
+                                        </div>
+                                        <a href="#">
+                                            <img src="images/banner-horizontal.png">
+                                        </a>
+                                    </div>
+                                    <div class="videos-item__name border-name">
+                                        <a href="#">
+                                            Обзор мужских часов Tissot T-Touch T013.420.47.201.00
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-item__img">
+                                        <div class="news-item__labels">
+                                            <span class="news-item__label time">1:37</span>
+                                            <span class="news-item__label stock"><i class="icon-cart"><b>Есть в наличии</b></i></span>
+                                        </div>
+                                        <a href="#">
+                                            <img src="images/banner-horizontal.png">
+                                        </a>
+                                    </div>
+                                    <div class="videos-item__name border-name">
+                                        <a href="#">
+                                            Обзор мужских часов Tissot T-Touch T013.420.47.201.00
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-item__img">
+                                        <div class="news-item__labels">
+                                            <span class="news-item__label time">1:37</span>
+                                            <span class="news-item__label stock"><i class="icon-cart"><b>Есть в наличии</b></i></span>
+                                        </div>
+                                        <a href="#">
+                                            <img src="images/banner-horizontal.png">
+                                        </a>
+                                    </div>
+                                    <div class="videos-item__name border-name">
+                                        <a href="#">
+                                            Обзор мужских часов Tissot T-Touch T013.420.47.201.00
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <div class="news-item__img">
+                                        <div class="news-item__labels">
+                                            <span class="news-item__label time">1:37</span>
+                                            <span class="news-item__label stock"><i class="icon-cart"><b>Есть в наличии</b></i></span>
+                                        </div>
+                                        <a href="#">
+                                            <img src="images/banner-horizontal.png">
+                                        </a>
+                                    </div>
+                                    <div class="videos-item__name border-name">
+                                        <a href="#">
+                                            Обзор мужских часов Tissot T-Touch T013.420.47.201.00
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination-block">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination">
+                                        <li class="hide-mb">
+                                            <a href="#" aria-label="Previous" class="prev">
+                                                <i class="icon-arrow-left"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#" class="active">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#" class="more">...</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li class="hide-mb">
+                                            <a href="#" aria-label="Next" class="next">
+                                                <i class="icon-arrow-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="clearfix"></div>
+                                <a href="#" class="showmore">Показать еще 20</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subscribe-block">
+                        <div class="subscribe">
+                            <div class="inside">
+                                <p class="subscribe-quote">Оформите подписку</p>
+                                <p class="subscribe-title">Будьте в курсе акций
+                                    и последних поступлениях</p>
+                                <form action="" class="subscribe-form">
+                                    <input type="text" placeholder="Введите e-mail">
+                                    <button type="submit" class="red-btn">Подписаться</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="advantage">
+                            <div class="advantage-list">
+                                <div class="advantage-item">
+                                    <div class="inside">
+                                        <i class="icon-car"></i>
+                                        <p>Есть собственная служба доставки, также работаем
+                                            с ведущими транспортными компаниями</p>
+                                    </div>
+                                </div>
+                                <div class="advantage-item">
+                                    <div class="inside">
+                                        <i class="icon-pay"></i>
+                                        <p>Оплата любыми способами
+                                            и возврат в течении 14 дней</p>
+                                    </div>
+                                </div>
+                                <div class="advantage-item">
+                                    <div class="inside">
+                                        <i class="icon-basket"></i>
+                                        <p>Более 190 брендов и свыше
+                                            50 000 товаров</p>
+                                    </div>
+                                </div>
+                                <div class="advantage-item">
+                                    <div class="inside">
+                                        <i class="icon-store"></i>
+                                        <p>15 оффлайн магазинов
+                                            в Санкт-Петербурге
+                                            и 7 в Москве</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-block hide-mb">
+                        <h2>Просто текст</h2>
+                        <p>Японские часы - кварцевые и электронные - на сегодняшний день прочно заняли лидерские позиции среди доступных качественных часов во всем мире. Это и неудивительно, ведь Япония - признанный лидер в производстве высокотехнологичных товаров. Первые японские часы и первые кварцевые часы - практически одно и то же.</p>
+                        <p>Первый часовой магазин в 1881 году в Японии открыл основатель всемирно известной на сегодняшний день компании Seiko. Кварцевые наручные часы Seiko были представлены миру в 1969-м. Эти японские часы сразу же произвели настоящий фурор в часовой промышленности: они были точнее механической классики благодаря меньшему количеству деталей и принципиально иному принципу работы. Благодаря этому японские часы стали и более надежными, ударопрочными, водостойкими. Сложное механическое устройство было намного труднее защитить от воздействия окружающей среды.</p>
+                        <p>Самые новые технологии в области часов и сегодня появляются также благодаря Японии. В компании Citizen, например, были изобретены часы, не нуждающиеся в батарейке - Citizen Есо-Drive. Эти японские часы питаются от солнечной энергии. Здесь же были разработаны часы, заряжающиеся от движения, и даже от перепада температур тела человека и окружающей среды!</p>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="footer-menu">
+                        <nav>
+                            <ul>
+                                <li class="title"><a href="#">Каталог</a></li>
+                                <li><a href="#">Наручные часы</a></li>
+                                <li><a href="#">Интерьерные часы</a></li>
+                                <li><a href="#">Ювелирные изделия</a></li>
+                                <li><a href="#">Подарки</a></li>
+                            </ul>
+                            <ul>
+                                <li class="title"><a href="#">О компании</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Подписка</a></li>
+                                <li><a href="#">Скидки</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Франшиза</a></li>
+                                <li><a href="#">Карьера</a></li>
+                            </ul>
+                            <ul>
+                                <li class="title"><a href="#">Услуги</a></li>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Кредитные возможности</a></li>
+                                <li><a href="#">Гарантия</a></li>
+                                <li><a href="#">Нанесение логотипов</a></li>
+                                <li><a href="#">Магазины и пункты выдачи</a></li>
+                            </ul>
+                            <ul>
+                                <li class="title"><a href="#">Bestclub</a></li>
+                                <li><a href="#">Войти или зарегистрироваться</a></li>
+                                <li><a href="#">Что такое Bestclub?</a></li>
+                                <li><a href="#">Видео-обзоры часов</a></li>
+                                <li><a href="#">Версия для мобильных устройств</a></li>
+                                <li><a href="#">Сервисный цент «Ренессанс»</a></li>
+                            </ul>
+                        </nav>
+                        <div class="footer-menu__info">
+                            <div>
+                                <p class="title">Заказ с 8:00 до 23:00</p>
+                            </div>
+                            <div>
+                                <p>Москва</p>
+                                <a href="tel:+74955892707">+7 (495) 589-27-07</a>
+                            </div>
+                            <div>
+                                <p>Санкт-Петербург</p>
+                                <a href="tel:+78126777100">+7 (812) 677-71-00</a>
+                            </div>
+                            <div>
+                                <p>Россия (звонок бесплатный)</p>
+                                <a href="tel:+78005550559">8 800 555-0-559</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-shops hide-mb">
+                        <h5 class="footer-shops__title">Магазины в Санкт-Петербурге</h5>
+                        <div class="footer-shops__list">
+                            <a href="#">Континент</a>
+                            <span class="delimeter"></span>
+                            <a href="#">Европолис</a>
+                            <span class="delimeter"></span>
+                            <a href="#">Галерея</a>
+                            <span class="delimeter"></span>
+                            <a href="#">Невский Атриум</a>
+                            <span class="delimeter"></span>
+                            <a href="#">МЕГА Дыбенко</a>
+                            <span class="delimeter"></span>
+                            <a href="#">МЕГА Парнас</a>
+                            <span class="delimeter hide-tab"></span>
+                            <a href="#" class="hide-tab">ЛЕТО</a>
+                            <span class="delimeter hide-tab"></span>
+                            <a href="#" class="hide-tab">Континент на Стачек</a>
+                            <span class="delimeter hide-xs hide-tab"></span>
+                            <a href="#" class="hide-xs hide-tab">Континент на Бухарестской</a>
+                            <span class="delimeter hide-sm  hide-xs hide-tab"></span>
+                            <a href="#" class="hide-sm hide-xs hide-tab">Охта Молл</a>
+                        </div>
+                        <div class="footer-shops__map"><a href="#"><i class="icon-baloon"></i> Смотреть на карте</a></div>
+                    </div>
+                    <div class="footer-social">
+                        <div class="footer-social__left">
+                            <a href="#" style="background: url(images/google.png) no-repeat"></a>
+                            <a href="#" style="background: url(images/appstore.png) no-repeat"></a>
+                        </div>
+                        <div class="footer-social__right">
+                            <a href="#"><i class="icon-google"></i></a>
+                            <a href="#"><i class="icon-insta"></i></a>
+                            <a href="#"><i class="icon-vk"></i></a>
+                            <a href="#"><i class="icon-twitter"></i></a>
+                            <a href="#"><i class="icon-fb"></i></a>
+                            <a href="#"><i class="icon-ok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-information">
+                        <div class="footer-information__left hide-mb">
+                            <p>© 1999–2016 интернет-магазин наручных часов, интерьерных часов, ювелирных изделий и подарков — Bestwatch.ru</p>
+                        </div>
+                        <div class="footer-information__center">
+                            <img src="images/mastercard.png">
+                            <img src="images/visa.png">
+                            <img src="images/yamoney.png">
+                        </div>
+                        <div class="footer-information__right">
+                            <div>
+                                <p>Дизайн сайта и аналитика</p>
+                                <a href="http://glavnaya.com">Главная страница</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <div class="footer-last">Обращаем ваше внимание на то, что приведённые цены и характеристики товаров носят исключительно ознакомительный характер и не являются публичной офертой, определённой пунктом 2 статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации о характеристиках товаров, их наличия и стоимости связывайтесь, пожалуйста, с менеджерами нашей компании.</div>
+            </div>
+            <div class="content-toggle-right">
+                <div class="inside">
+                    <a href="#"><i class="icon-cart"><span class="counter red">5</span></i></a>
+                    <a href="#"><i class="icon-heart-o"><span class="counter">16</span></i></a>
+                    <a href="#"><i class="icon-eye"></i></a>
+                </div>
+            </div>
+            <div class="content-right">
+                <div class="inside">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#cart" aria-controls="cart" role="tab" data-toggle="tab"><i class="icon-cart"><span class="counter red">5</span></i></a></li>
+                        <li role="presentation"><a class="like" href="#liked" aria-controls="liked" role="tab" data-toggle="tab"><i class="icon-heart-o"><span class="counter">16</span></i></a></li>
+                        <li role="presentation"><a class="visited" href="#watch" aria-controls="watch" role="tab" data-toggle="tab"><i class="icon-eye"></i></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="cart">
+                            <div class="side-cart">
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="side-cart__btn red"><i class="icon-cart"></i>Перейти в корзину</a>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="liked">
+                            <h4 class="side-title">Избранное</h4>
+                            <div class="side-cart">
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                        <div class="side-cart__control">
+                                            <a href="#" class="side-cart__basket"><i class="icon-cart-add"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="watch">
+                            <h4 class="side-title">Просмотренные товары</h4>
+                            <div class="side-cart">
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                        <div class="side-cart__control">
+                                            <a href="#" class="side-cart__liked"><i class="icon-heart"></i></a>
+                                            <a href="#" class="side-cart__basket"><i class="icon-cart-add"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <div class="side-cart__item">
+                                    <div class="side-cart__item__img">
+                                        <img src="images/exclusive.png">
+                                    </div>
+                                    <div class="side-cart__item__info">
+                                        <p class="side-cart__item__code">ES-0014-02</p>
+                                        <a href="#" class="side-cart__item__name"><span class="bold">Nixon</span> Kempton</a>
+                                        <p class="side-cart__item__oldprice">19 897 <i class="icon-rub"></i></p>
+                                        <p class="side-cart__item__price">19 897 <i class="icon-rub"></i></p>
+                                        <a href="#" class="side-cart__item__remove">×</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="cityChange" tabindex="-1" role="dialog" aria-labelledby="cityChange">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+                        <h4 class="modal-title" id="myModalLabel">Из какого вы города?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="city">
+                            <div class="city-search">
+                                <input type="text">
+                                <button type="submit"><i class="icon-search"></i></button>
+                            </div>
+                            <div class="city-example">
+                                <p>Например: <a href="#">Москва</a> или <a href="#">Санкт-Петербург</a></p>
+                            </div>
+                            <div class="city-list">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#ru" aria-controls="home" role="tab" data-toggle="tab">Россия</a></li>
+                                    <li role="presentation"><a href="#kz" aria-controls="profile" role="tab" data-toggle="tab">Казахстан</a></li>
+                                    <li role="presentation"><a href="#be" aria-controls="messages" role="tab" data-toggle="tab">Беларусь</a></li>
+                                    <li role="presentation"><a href="#ar" aria-controls="settings" role="tab" data-toggle="tab">Армения</a></li>
+                                    <li role="presentation"><a href="#kr" aria-controls="settings" role="tab" data-toggle="tab">Крыгызстан</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="ru">
+                                        <ul>
+                                            <li><a href="#" class="bold">Москва</a></li>
+                                            <li><a href="#" class="bold">Санкт-Петербург</a></li>
+                                            <li><a href="#">Астрахань</a></li>
+                                            <li><a href="#">Владивосток</a></li>
+                                            <li><a href="#">Екатеринбург</a></li>
+                                            <li><a href="#">Казань</a></li>
+                                            <li><a href="#">Краснодар</a></li>
+                                            <li><a href="#">Красноярск</a></li>
+                                            <li><a href="#">Мурманск</a></li>
+                                            <li><a href="#">Нижний Новгород</a></li>
+                                            <li><a href="#">Новосибирск</a></li>
+                                            <li><a href="#">Омск</a></li>
+                                            <li><a href="#">Пермь</a></li>
+                                            <li><a href="#">Ростов-на-Дону</a></li>
+                                            <li><a href="#">Самара</a></li>
+                                            <li><a href="#">Сочи</a></li>
+                                            <li><a href="#">Тюмень</a></li>
+                                            <li><a href="#">Уфа</a></li>
+                                            <li><a href="#">Хабаровск</a></li>
+                                            <li><a href="#">Челябинск</a></li>
+                                            <li><a href="#">Якутск</a></li>
+                                        </ul>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="kz">
+                                        <ul>
+                                            <li><a href="#" class="bold">Москва</a></li>
+                                            <li><a href="#" class="bold">Санкт-Петербург</a></li>
+                                            <li><a href="#">Астрахань</a></li>
+                                            <li><a href="#">Владивосток</a></li>
+                                            <li><a href="#">Екатеринбург</a></li>
+                                            <li><a href="#">Казань</a></li>
+                                            <li><a href="#">Краснодар</a></li>
+                                            <li><a href="#">Красноярск</a></li>
+                                            <li><a href="#">Мурманск</a></li>
+                                            <li><a href="#">Нижний Новгород</a></li>
+                                            <li><a href="#">Новосибирск</a></li>
+                                            <li><a href="#">Омск</a></li>
+                                            <li><a href="#">Пермь</a></li>
+                                            <li><a href="#">Ростов-на-Дону</a></li>
+                                            <li><a href="#">Самара</a></li>
+                                            <li><a href="#">Сочи</a></li>
+                                            <li><a href="#">Тюмень</a></li>
+                                            <li><a href="#">Уфа</a></li>
+                                            <li><a href="#">Хабаровск</a></li>
+                                            <li><a href="#">Челябинск</a></li>
+                                            <li><a href="#">Якутск</a></li>
+                                        </ul>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="be">
+                                        <ul>
+                                            <li><a href="#" class="bold">Москва</a></li>
+                                            <li><a href="#" class="bold">Санкт-Петербург</a></li>
+                                            <li><a href="#">Астрахань</a></li>
+                                            <li><a href="#">Владивосток</a></li>
+                                            <li><a href="#">Екатеринбург</a></li>
+                                            <li><a href="#">Казань</a></li>
+                                            <li><a href="#">Краснодар</a></li>
+                                            <li><a href="#">Красноярск</a></li>
+                                            <li><a href="#">Мурманск</a></li>
+                                            <li><a href="#">Нижний Новгород</a></li>
+                                            <li><a href="#">Новосибирск</a></li>
+                                            <li><a href="#">Омск</a></li>
+                                            <li><a href="#">Пермь</a></li>
+                                            <li><a href="#">Ростов-на-Дону</a></li>
+                                            <li><a href="#">Самара</a></li>
+                                            <li><a href="#">Сочи</a></li>
+                                            <li><a href="#">Тюмень</a></li>
+                                            <li><a href="#">Уфа</a></li>
+                                            <li><a href="#">Хабаровск</a></li>
+                                            <li><a href="#">Челябинск</a></li>
+                                            <li><a href="#">Якутск</a></li>
+                                        </ul>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="ar">
+                                        <ul>
+                                            <li><a href="#" class="bold">Москва</a></li>
+                                            <li><a href="#" class="bold">Санкт-Петербург</a></li>
+                                            <li><a href="#">Астрахань</a></li>
+                                            <li><a href="#">Владивосток</a></li>
+                                            <li><a href="#">Екатеринбург</a></li>
+                                            <li><a href="#">Казань</a></li>
+                                            <li><a href="#">Краснодар</a></li>
+                                            <li><a href="#">Красноярск</a></li>
+                                            <li><a href="#">Мурманск</a></li>
+                                            <li><a href="#">Нижний Новгород</a></li>
+                                            <li><a href="#">Новосибирск</a></li>
+                                            <li><a href="#">Омск</a></li>
+                                            <li><a href="#">Пермь</a></li>
+                                            <li><a href="#">Ростов-на-Дону</a></li>
+                                            <li><a href="#">Самара</a></li>
+                                            <li><a href="#">Сочи</a></li>
+                                            <li><a href="#">Тюмень</a></li>
+                                            <li><a href="#">Уфа</a></li>
+                                            <li><a href="#">Хабаровск</a></li>
+                                            <li><a href="#">Челябинск</a></li>
+                                            <li><a href="#">Якутск</a></li>
+                                        </ul>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="kr">
+                                        <ul>
+                                            <li><a href="#" class="bold">Москва</a></li>
+                                            <li><a href="#" class="bold">Санкт-Петербург</a></li>
+                                            <li><a href="#">Астрахань</a></li>
+                                            <li><a href="#">Владивосток</a></li>
+                                            <li><a href="#">Екатеринбург</a></li>
+                                            <li><a href="#">Казань</a></li>
+                                            <li><a href="#">Краснодар</a></li>
+                                            <li><a href="#">Красноярск</a></li>
+                                            <li><a href="#">Мурманск</a></li>
+                                            <li><a href="#">Нижний Новгород</a></li>
+                                            <li><a href="#">Новосибирск</a></li>
+                                            <li><a href="#">Омск</a></li>
+                                            <li><a href="#">Пермь</a></li>
+                                            <li><a href="#">Ростов-на-Дону</a></li>
+                                            <li><a href="#">Самара</a></li>
+                                            <li><a href="#">Сочи</a></li>
+                                            <li><a href="#">Тюмень</a></li>
+                                            <li><a href="#">Уфа</a></li>
+                                            <li><a href="#">Хабаровск</a></li>
+                                            <li><a href="#">Челябинск</a></li>
+                                            <li><a href="#">Якутск</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="cityChange">
+            <div class="modal-dialog big" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="login">
+                            <div class="login-left hide-mb">
+                                <a href="#" class="close-login-slider"><i class="icon-close"></i></a>
+                                <div class="login-slider">
+                                    <div style="background: url(images/bestclub-photo.png) no-repeat transparent; background-position: center; background-size: cover;">
+                                        <div class="inside">
+                                            <h4>Bestclub</h4>
+                                            <img src="images/happy.svg" class="icons">
+                                            <p class="description">
+                                                Приятные скидки в день рождения и ближайшие к нему дни
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style="background: url(images/bestclub-photo.png) no-repeat transparent; background-position: center; background-size: cover;">
+                                        <div class="inside">
+                                            <h4>Bestclub</h4>
+                                            <img src="images/happy.svg" class="icons">
+                                            <p class="description">
+                                                Приятные скидки в день рождения и ближайшие к нему дни
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style="background: url(images/bestclub-photo.png) no-repeat transparent; background-position: center; background-size: cover;">
+                                        <div class="inside">
+                                            <h4>Bestclub</h4>
+                                            <img src="images/happy.svg" class="icons">
+                                            <p class="description">
+                                                Приятные скидки в день рождения и ближайшие к нему дни
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="login-right">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+                                <div class="login-banner">
+                                    <p>Узнайте какие привелегии<br>дает регистрация в Bestclub</p>
+                                </div>
+                                <div class="login-form">
+                                    <h4>Войти в bestclub</h4>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="numberLog">Номер карты или e-mail</label>
+                                            <input type="text" id="numberLog" name="numberLog">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="passLog">Пароль</label>
+                                            <input type="password" id="passLog" name="passLog">
+                                        </div>
+                                        <input type="submit" value="Отправить" class="red-btn">
+                                    </form>
+                                    <div class="login-link">
+                                        <a href="#" class="red" data-toggle="modal" data-target="#registration">Регистрация</a>
+                                        <a href="#">Забыли пароль</a>
+                                    </div>
+                                </div>
+                                <div class="login-social">
+                                    <p class="title">Войти через соцсети</p>
+                                    <div class="login-social__block">
+                                        <a href="#"><i class="icon-google"></i></a>
+                                        <a href="#"><i class="icon-vk"></i></a>
+                                        <a href="#"><i class="icon-twitter"></i></a>
+                                        <a href="#"><i class="icon-fb"></i></a>
+                                        <a href="#"><i class="icon-ok"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="cityChange">
+            <div class="modal-dialog big" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="login">
+                            <div class="login-left hide-mb">
+                                <a href="#" class="close-login-slider"><i class="icon-close"></i></a>
+                                <div class="login-slider">
+                                    <div style="background: url(images/bestclub-photo.png) no-repeat transparent; background-position: center; background-size: cover;">
+                                        <div class="inside">
+                                            <h4>Bestclub</h4>
+                                            <img src="images/happy.svg" class="icons">
+                                            <p class="description">
+                                                Приятные скидки в день рождения и ближайшие к нему дни
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style="background: url(images/bestclub-photo.png) no-repeat transparent; background-position: center; background-size: cover;">
+                                        <div class="inside">
+                                            <h4>Bestclub</h4>
+                                            <img src="images/happy.svg" class="icons">
+                                            <p class="description">
+                                                Приятные скидки в день рождения и ближайшие к нему дни
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style="background: url(images/bestclub-photo.png) no-repeat transparent; background-position: center; background-size: cover;">
+                                        <div class="inside">
+                                            <h4>Bestclub</h4>
+                                            <img src="images/happy.svg" class="icons">
+                                            <p class="description">
+                                                Приятные скидки в день рождения и ближайшие к нему дни
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="login-right">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+                                <div class="login-banner">
+                                    <p>Узнайте какие привелегии<br>дает регистрация в Bestclub</p>
+                                </div>
+                                <div class="login-form">
+                                    <h4>Войти в bestclub</h4>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="mailReg">E-mail</label>
+                                            <input type="text" id="mailReg" name="mailReg">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="passReg">Пароль</label>
+                                            <input type="password" id="passReg" name="passReg">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="passRegRep">Пароль</label>
+                                            <input type="password" id="passRegRep" name="passRegRep">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Я хочу получать рассылку
+                                            </label>
+                                        </div>
+                                        <div class="login-captcha">
+                                            <!-- Тут будет капча  -->
+                                            <img src="images/captcha.jpg" alt="">
+                                        </div>
+                                        <input type="submit" value="Зарегистрироваться" class="red-btn">
+                                    </form>
+                                    <div class="login-link text-center"><a href="#"  data-toggle="modal" data-target="#login" class="red">У меня уже есть аккаунт</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

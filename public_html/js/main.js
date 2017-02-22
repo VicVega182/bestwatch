@@ -8,7 +8,7 @@ $.fn.extend({
 });
 $.fn.exists = function () {
     return $(this).length;
-}
+};
 
 $(document).ready(function () {
     if ($('.banner-slider__slider').exists()) {
@@ -24,7 +24,7 @@ $(document).ready(function () {
             $('.header-nav > nav > ul').find('> li:not(.hovered)').addClass('blockout');
         },
         mouseleave: function () {
-            $('.header-nav > nav > ul').find('> li').removeClass('blockout')
+            $('.header-nav > nav > ul').find('> li').removeClass('blockout');
             $(this).removeClass('hovered');
         }
     });
@@ -126,6 +126,28 @@ $(document).ready(function () {
         } else if ($(document).width() < 768) {
             $('.card-slider').css('max-width', $('.card-body').width() + 'px');
         }
+    }
+    if ($('.shop-page__gallery').exists()) {
+        $('.shop-page__gallery').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: true
+        });
+    }
+    if ($('.text-page__gallery').exists()) {
+        $('.text-page__gallery').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: true
+        });
     }
     if ($('.brand-slider').exists()) {
         $('.brand-slider').css('max-width', $('.catalog-page__list').width() + 'px');

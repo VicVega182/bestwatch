@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Оформление заказа</title>
+        <title>Спасибо за заказ!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -93,150 +93,45 @@
                 <div class="wrapper">
                     <div class="cart">
                         <div class="cart-header">
-                            <h1>Оформление заказа</h1>
-                            <a href="#">Вернуться в корзину</a>
+                            <h1>Спасибо за заказ!</h1>
+                            <a href="#">Вернуться на сайт</a>
                         </div>
                         <div class="cart-body">
-                            <div class="cart-body__left">
-                                <div class="checkout-user checkout-block">
-                                    <div class="left">
-                                        <div class="checkout-body__header">
-                                            <h3>Новый клиент</h3>
-                                        </div>
-                                        <form action="">
-                                            <div class="form-group">
-                                                <label for="check-name">ФИО</label>
-                                                <input type="text" class="form-control" id="check-name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="check-mail">E-mail</label>
-                                                <input type="email" class="form-control" id="check-mail">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="check-phone">Телефон</label>
-                                                <input type="text" class="form-control" id="check-phone">
-                                            </div>
-                                        </form>
-                                    </div> 
-                                    <div class="right">
-                                        <div class="checkout-body__header">
-                                            <h3>Уже зарегистрирован</h3>
-                                        </div>
-                                        <a href="#" class="black-empty-btn">Войти</a>
-                                        <div class="checkout-social">
-                                            <p>Войти через соцсети</p>
-                                            <a href="#"><i class="icon-google"></i></a>
-                                            <a href="#"><i class="icon-vk"></i></a>
-                                            <a href="#"><i class="icon-twitter"></i></a>
-                                            <a href="#"><i class="icon-fb"></i></a>
-                                            <a href="#"><i class="icon-ok"></i></a>
-                                        </div>
+                            <div class="cart-body__left aftercheck">
+                                <p class="aftercheck-text">
+                                    В течении 15 минут мы с вами свяжемся для подтверждения заказа.
+                                    Вся информация о заказе отправлена вам на e-mail: <a href='mailto:dima@glavnaya.com'>dima@glavnay.com</a>
+                                </p>
+                                <div class="aftercheck-list">
+                                    <div class="aftercheck-item">
+                                        <div class="aftercheck-name">Номер вашего заказа:</div>
+                                        <div class="aftercheck-comp">66 88 256</div>
+                                    </div>
+                                    <div class="aftercheck-item">
+                                        <div class="aftercheck-name">Количество товаров:</div>
+                                        <div class="aftercheck-comp">3 шт.</div>
+                                    </div>
+                                    <div class="aftercheck-item">
+                                        <div class="aftercheck-name">Стоимость товаров:</div>
+                                        <div class="aftercheck-comp">13 600 <i class="icon-rub-lite"></i></div>
+                                    </div>
+                                    <div class="aftercheck-item">
+                                        <div class="aftercheck-name">Стоимость самовывоза:</div>
+                                        <div class="aftercheck-comp">-500 <i class="icon-rub-lite"></i></div>
+                                    </div>
+                                    <div class="aftercheck-item">
+                                        <div class="aftercheck-name">Сумма к оплате</div>
+                                        <div class="aftercheck-comp">13 600 <i class="icon-rub-lite"></i></div>
+                                    </div>
+                                    <div class="aftercheck-item all">
+                                        <div class="aftercheck-name">Сумма к оплате</div>
+                                        <div class="aftercheck-comp">13 100 <i class="icon-rub"></i></div>
                                     </div>
                                 </div>
-                                <div class="checkout-delivery checkout-block">
-                                    <div class="checkout-body__header">
-                                        <h3>Способ получения заказа в городе</h3><a href="#" data-toggle="modal" data-target="#cityChange">Санкт-Петербурге <i class="icon-arrow-dd"></i></a>
-                                    </div>
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li role="presentation" class="active"><a href="#checkPickup" aria-controls="checkPickup" role="tab" data-toggle="tab">Самовывоз</a></li>
-                                        <li role="presentation"><a href="#checkDelivery" aria-controls="checkDelivery" role="tab" data-toggle="tab">Доставка</a></li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="checkPickup">
-                                            <div class="inside">
-                                                <p class="checkout-quote">Забирая товар самостоятельно из нашего магазина мы дарим скидку к заказу <span class="black">–500 ₽</span></p>
-                                                <div class="btn-group" data-toggle="buttons">
-                                                    <label class="btn btn-primary active">
-                                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Восстания д.1 <i class="date-pickup">Забрать сегодня</i>
-                                                        <span class="information-pickup hide-tab hide-mb">
-                                                            <i class="metro-station blue">м</i>
-                                                            <i>Звездная, ул. Звездная, д.1</i>
-                                                        </span>   
-                                                        <span class="clearfix"></span>
-                                                        <span class="work-pickup">
-                                                            <b>Забрать сегодня</b>
-                                                            <b><i class="icon-clock"></i> с 10-00 до 22-00, ПН—ВС</b>
-                                                        </span>
-                                                        <span class="map-pickup">
-                                                            <img src="images/map.png">
-                                                        </span>
-                                                    </label>
-                                                    <label class="btn btn-primary">
-                                                        <input type="radio" name="options" id="option2" autocomplete="off"> Фуражный д.3 <i class="date-pickup">Забрать сегодня</i>
-                                                        <span class="information-pickup hide-tab hide-mb">
-                                                            <i class="metro-station blue">м</i>
-                                                            <i>Звездная, ул. Звездная, д.1</i>
-                                                        </span>   
-                                                        <span class="clearfix"></span>
-                                                        <span class="work-pickup">
-                                                            <b>Забрать сегодня</b>
-                                                            <b><i class="icon-clock"></i> с 10-00 до 22-00, ПН—ВС</b>
-                                                        </span>
-                                                        <span class="map-pickup">
-                                                            <img src="images/map.png">
-                                                        </span>
-                                                    </label>
-                                                    <label class="btn btn-primary">
-                                                        <input type="radio" name="options" id="option3" autocomplete="off"> Камышовая д.6 <i class="date-pickup">Забрать сегодня</i>
-                                                        <span class="information-pickup hide-tab hide-mb">
-                                                            <i class="metro-station blue">м</i>
-                                                            <i>Звездная, ул. Звездная, д.1</i>
-                                                        </span>   
-                                                        <span class="clearfix"></span>
-                                                        <span class="work-pickup">
-                                                            <b>Забрать сегодня</b>
-                                                            <b><i class="icon-clock"></i> с 10-00 до 22-00, ПН—ВС</b>
-                                                        </span>
-                                                        <span class="map-pickup">
-                                                            <img src="images/map.png">
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id="checkDelivery">
-                                            <div class="inside">
-                                                <div class="btn-group" data-toggle="buttons">
-                                                    <label class="btn btn-primary active">
-                                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Восстания д.1
-                                                    </label>
-                                                    <label class="btn btn-primary">
-                                                        <input type="radio" name="options" id="option2" autocomplete="off"> Фуражный д.3
-                                                    </label>
-                                                    <label class="btn btn-primary">
-                                                        <input type="radio" name="options" id="option3" autocomplete="off"> Камышовая д.6
-                                                    </label>
-                                                </div>
-                                                <div class="checkout-address">
-                                                    <p>Адрес доставки</p>
-                                                    <input type="text" placeholder="Улица, дом, корпус, квартира">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="checkout-pay checkout-block">
-                                    <div class="checkout-body__header">
-                                        <h3>Способ оплаты</h3>
-                                    </div>
-                                    <div class="btn-group" data-toggle="buttons">
-                                        <label class="btn btn-primary active">
-                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Восстания д.1
-                                        </label>
-                                        <label class="btn btn-primary">
-                                            <input type="radio" name="options" id="option2" autocomplete="off"> Фуражный д.3
-                                        </label>
-                                        <label class="btn btn-primary">
-                                            <input type="radio" name="options" id="option3" autocomplete="off"> Камышовая д.6
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="checkout-comment checkout-block">
-                                    <div class="checkout-body__header">
-                                        <h3>Комментарий к заказу</h3>
-                                    </div>
-                                    <textarea name="comment" id="comment" rows="8" placeholder="Укажите на что обратить внимание при оформлении или доставке вашего заказа"></textarea>
-                                </div>
+                                <p class="aftercheck-text">
+                                    Забрать свой заказ вы сможете сегодня в ТРК «Континент» по адресу: м. Звездная, ул. Звездная, д. 1. Режим работы магазина с 10:00 до 22:00 ПН—ВС
+                                </p>
+                                <img src="images/map.png">
                             </div>
                             <div class="cart-body__right">
                                 <div class="checkout-cart">
@@ -250,64 +145,24 @@
                                             <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
                                         </div>
                                     </div>
-                                    <div class="collapse" id="collapseCheckout">
-                                        <div class="checkout-cart__item">
-                                            <div class="checkout-cart__item__image">
-                                                <img src="images/exclusive.png">
-                                            </div>
-                                            <div class="checkout-cart__item__desc">
-                                                <p class="checkout-cart__item__name">Skagen Leather SKW6306</p>
-                                                <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
-                                            </div>
+                                    <div class="checkout-cart__item">
+                                        <div class="checkout-cart__item__image">
+                                            <img src="images/exclusive.png">
                                         </div>
-                                        <div class="checkout-cart__item">
-                                            <div class="checkout-cart__item__image">
-                                                <img src="images/exclusive.png">
-                                            </div>
-                                            <div class="checkout-cart__item__desc">
-                                                <p class="checkout-cart__item__name">Skagen Leather SKW6306</p>
-                                                <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
-                                            </div>
-                                        </div>
-                                        <div class="checkout-cart__item">
-                                            <div class="checkout-cart__item__image">
-                                                <img src="images/exclusive.png">
-                                            </div>
-                                            <div class="checkout-cart__item__desc">
-                                                <p class="checkout-cart__item__name">Skagen Leather SKW6306</p>
-                                                <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
-                                            </div>
+                                        <div class="checkout-cart__item__desc">
+                                            <p class="checkout-cart__item__name">Skagen Leather SKW6306</p>
+                                            <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
                                         </div>
                                     </div>
-                                    <a class="checkout-cart__showall" role="button" data-toggle="collapse" href="#collapseCheckout" aria-expanded="false" aria-controls="collapseExample">
-                                        Показать все
-                                    </a>
-                                </div>
-                                <div class="checkout-delivery__info">
-                                    <h4>Способ доставки и оплаты</h4>
-                                    <div>
-                                        <span>Доставка:</span>
-                                        <span class="black check-js__delivery">Восстания д.1</span>
+                                    <div class="checkout-cart__item">
+                                        <div class="checkout-cart__item__image">
+                                            <img src="images/exclusive.png">
+                                        </div>
+                                        <div class="checkout-cart__item__desc">
+                                            <p class="checkout-cart__item__name">Skagen Leather SKW6306</p>
+                                            <p class="checkout-cart__item__count">2 шт. × <span>7500</span> <i class="icon-rub"></i></p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <span>Оплата:</span>
-                                        <span class="black check-js__pay">Восстания д.1</span>
-                                    </div>
-                                </div>
-                                <div class="checkout-delivery__order">
-                                    <div>
-                                        <span>Стоимость доставки</span>
-                                        <span>1963 <i class="icon-rub"></i></span>
-                                    </div>
-                                    <div>
-                                        <span>Сумма заказа</span>
-                                        <span>30 180 <i class="icon-rub"></i></span>
-                                    </div>
-                                    <div class="all">
-                                        <span>Итого</span>
-                                        <span>30 180 <i class="icon-rub"></i></span>
-                                    </div>
-                                    <a href="#" class="red-btn">Завершить оформление</a>
                                 </div>
                             </div>
                         </div>
