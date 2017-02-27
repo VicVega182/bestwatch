@@ -402,7 +402,7 @@
                             </div>
                             <h1>Флагманский магазин в  «Невском Атриуме»</h1>
                             <p class="shop-page__address">ТЦ «Невский Атриум» Санкт-Петербург, Невский пр., д. 71</p>
-                            <a href="#" class="shop-page__showmap">Смотреть на карте</a>
+                            <a href="#shop-page__map" class="shop-page__showmap">Смотреть на карте</a>
                             <div class="shop-page__info">
                                 <span><i class="metro green">м</i> Маяковская</span>
                                 <span><i class="icon-clock"></i> 10:00–22:00 ПН—ВС</span>
@@ -427,7 +427,7 @@
                                 <p>Среди представленных в магазине брендов – такие известные, как Casio, Michael Kors, Diesel, DKNY, Fossil, Orient, Skagen, а также новые бренды в часовой индустрии: Swiss Collection, adidas, Emporio Armani, Jaz-ma, Earnshaw.</p>
                             </div>
                         </div>
-                        <div class="shop-page__map">
+                        <div class="shop-page__map" id="shop-page__map">
                             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=EqGFaffslcojY5vCqrN3-zYsGMQskr5O&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
                         </div>
                     </div>
@@ -436,7 +436,7 @@
                             <h3>Ассортимент в «Неском Атриуме»</h3>
                             <a href="#">18 856 часов <i class="icon-arrow-bold"></i></a>
                         </div>
-                        <div class="catalog-list main">
+                        <div class="catalog-list main inside-page">
                             <div class="catalog-item">
                                 <div class="catalog-item__header">
                                     <div class="catalog-item__header__left">
@@ -1261,9 +1261,9 @@
                                             <label for="passRegRep">Пароль</label>
                                             <input type="password" id="passRegRep" name="passRegRep">
                                         </div>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> Я хочу получать рассылку
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn">
+                                                <input type="checkbox" autocomplete="off"> Я хочу получать рассылку
                                             </label>
                                         </div>
                                         <div class="login-captcha">

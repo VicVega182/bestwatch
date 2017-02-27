@@ -148,7 +148,7 @@
                 <div class="drawer-header__first">
                     <div class="drawer-header__left">
                         <div class="dropdown">
-                            <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <a id="dLabel" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 Санкт-Петербург
                                 <span class="icon-arrow-dd"></span>
                             </a>
@@ -400,23 +400,27 @@
                                         <span class="page-header__counter">1780 часов</span>
                                     </div>
                                     <div class="catalog-page__header__right hide-tab hide-mb"> <!-- Не выводим на планшете и мобильном -->
-                                        <a href="#" class="active">По цене <i class="icon-arrow-dd"></i></a>
-                                        <a href="#">По популярности <i class="icon-arrow-dd"></i></a>
-                                        <a href="#">По новизне <i class="icon-arrow-dd"></i></a>
-                                        <a href="#">По алфавиту <i class="icon-arrow-dd"></i></a>
+                                        <a href="#" class="active">По цене <i class="icon-arrow-left"></i></a>
+                                        <a href="#">По популярности <i class="icon-arrow-left"></i></a>
+                                        <a href="#">По новизне <i class="icon-arrow-left"></i></a>
+                                        <a href="#">По алфавиту <i class="icon-arrow-left"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="catalog-page__header__mobile"> <!-- Не выводить на ПК -->
                                 <div class="dropdown sortChange">
                                     <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span>По цене</span> <i class="icon-arrow-dd"></i>
+                                        <span>По цене</span> <i class="icon-arrow-left"></i>
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                        <li><a href="#">По цене</a></li>
-                                        <li><a href="#">По популярности</a></li>
-                                        <li><a href="#">По новизне</a></li>
-                                        <li><a href="#">По алфавиту</a></li>
+                                        <li><a href="#">По цене <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#" class="desc">По цене <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#">По популярности <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#" class="desc">По популряности <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#">По новизне <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#" class="desc">По новизне <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#">По алфавиту <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#" class="desc">По алфавиту <i class="icon-arrow-left"></i></a></li>
                                     </ul>
                                 </div>
                                 <a href="#" class="filter-open"><i class="icon-toggles"></i></a>
@@ -481,13 +485,13 @@
                                             <div class="collapse-inside">
                                                 <div class="btn-group" data-toggle="buttons">
                                                     <label class="btn">
-                                                        <input type="checkbox" autocomplete="off"> Бежевый
+                                                        <input type="checkbox" autocomplete="off"> Бежевый <i class="color" style="background: beige"></i>
                                                     </label>
                                                     <label class="btn">
-                                                        <input type="checkbox" autocomplete="off"> Белый
+                                                        <input type="checkbox" autocomplete="off"> Белый <i class="color" style="background: white"></i>
                                                     </label>
                                                     <label class="btn">
-                                                        <input type="checkbox" autocomplete="off"> Зеленый
+                                                        <input type="checkbox" autocomplete="off"> Зеленый <i class="color" style="background: green"></i>
                                                     </label>
                                                 </div>
                                             </div>
@@ -1473,9 +1477,9 @@
                                             <label for="passRegRep">Пароль</label>
                                             <input type="password" id="passRegRep" name="passRegRep">
                                         </div>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> Я хочу получать рассылку
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn">
+                                                <input type="checkbox" autocomplete="off"> Я хочу получать рассылку
                                             </label>
                                         </div>
                                         <div class="login-captcha">
