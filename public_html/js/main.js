@@ -11,6 +11,9 @@ $.fn.exists = function () {
 };
 
 $(document).ready(function () {
+    if ($.cookie('citygate') == null) {
+        $('.citygate').addClass('show-citygate');
+    }
     if ($('.banner-slider__slider').exists()) {
         $('.banner-slider__slider').slick({
             dots: true,
@@ -205,6 +208,10 @@ $(document).ready(function () {
             ]
         });
     }
+}).on('click', '.citygate a', function(e) {
+    $('.citygate').remove();
+    $.cookie('citygate', 'hide');
+    e.preventDefault();
 }).on('init', '.banner-slider__slider', function (slick) {
     var $this = $(this);
     var dots = $this.find('.slick-dots');

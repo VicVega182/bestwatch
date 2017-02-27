@@ -231,6 +231,88 @@ button:focus {
 /* !------------------------------END ALL BLOCK-------------------------------! */
 /* !------------------------------START HEADER BLOCK-------------------------------! */
 /* Header style */
+.citygate {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  display: none;
+}
+.citygate.show-citygate {
+  display: block;
+}
+.citygate .inside {
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  padding: 50px 16px;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+.citygate .inside .close {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #aaaaaa;
+  border-radius: 50%;
+  color: #aaaaaa;
+  opacity: 1;
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  margin-top: -18px;
+  line-height: 36px;
+}
+.citygate .inside h1 {
+  font-family: 'PSB';
+  font-size: 24px;
+  color: #484848;
+  margin: 0;
+}
+.citygate .inside .citygate-description {
+  padding-top: 13px;
+  font-size: 13px;
+  line-height: 1.54;
+  color: #484848;
+}
+.citygate .inside .citygate-btn {
+  padding-top: 10px;
+}
+.citygate .inside .citygate-btn a {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 10px 32px;
+  border-radius: 42px;
+}
+.citygate .inside .citygate-btn a + a {
+  margin-left: 16px;
+}
+.citygate .inside .citygate-btn a.red-btn {
+  color: #fff;
+  background: #f81029;
+  border-color: #f81029;
+}
+.citygate .inside .citygate-btn a.red-btn:hover {
+  opacity: .8;
+}
+.citygate .inside .citygate-btn a.gray-btn {
+  border-color: #484848;
+  color: #484848;
+}
+.citygate .inside .citygate-btn a.gray-btn:hover {
+  color: #fff;
+  background: #484848;
+}
 .mobile-menu,
 .mobile-catalog,
 .mobile-brand {
