@@ -57,7 +57,7 @@
                         <a href="#" data-toggle="modal" data-target="#registration" class="quote">Регистрация</a>
                     </div>
                     <div class="info-block">
-                        <a href="#"><i class="icon-pencil"></i> Задать вопрос</a>
+                        <a href="#" data-toggle="modal" data-target="#askQuestion"><i class="icon-pencil"></i> Задать вопрос</a>
                     </div>
                     <div class="info-block">
                         <a href="tel:+78128002332"><i class="icon-phone"></i> +7 812 800 23 32</a>
@@ -182,7 +182,7 @@
                     <li><a href="#">Статьи</a></li>
                     <li><a href="#">Видеообзоры</a></li>
                 </ul>
-                <a href="#" class="gray-btn">Задать вопрос</a>
+                <a href="#" data-toggle="modal" data-target="#askQuestion" class="gray-btn">Задать вопрос</a>
                 <div class="drawer-social">
                     <a href="#"><i class="icon-google"></i></a>
                     <a href="#"><i class="icon-insta"></i></a>
@@ -242,6 +242,11 @@
                 </div>
                 <header class="header">
                     <div class="header-first"> <!-- Не выводить на телефонах -->
+                        <div class="header-first__search__mobile">
+                            <input type="text">
+                            <button type="submit"><i class="icon-search"></i></button>
+                            <a href="#" class="close-mobile-search"><i class="icon-close"></i></a>
+                        </div>
                         <div class="header-first__left">
                             <div class="header-menu">
                                 <a href="#" class="menu-mobile__open"><i class="icon-menu"></i></a>
@@ -261,7 +266,7 @@
                         <div class="header-first__right">
                             <a href="#" class="header-login hide-mb" data-toggle="modal" data-target="#login"><i class="icon-user"></i><span>Войти</span></a>
                             <div class="header-mobile__right">
-                                <a href="#"><i class="icon-search"></i></a>
+                                <a href="#" class="open-mobile-search"><i class="icon-search"></i></a>
                                 <a href="#"><i class="icon-cart"><span class="counter red">5</span></i></a>
                             </div>
                         </div>
@@ -1690,14 +1695,69 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
                         <h4 class="modal-title">Задать вопрос</h4>
+                    </div>
+                    <div class="modal-body">
                         <p class="header-quote">
                             Если у вас есть вопросы или мысли по улучшению нашего магазина, напишите нам и мы обязательно ответим вам в течение дня.
                         </p>
+                        <form action="" class="form-ask">
+                            <div class="form-group half">
+                                <label for="nameAsk">Имя</label>
+                                <input type="text" class="form-control" id="nameAsk">
+                            </div>
+                            <div class="form-group half">
+                                <label for="phoneAsk">Телефон или e-mail</label>
+                                <input type="text" class="form-control" id="phoneAsk">
+                            </div>
+                            <div class="form-group full">
+                                <label for="commentAsk">Сообщение</label>
+                                <textarea name="commentAsk" id="commentAsk" rows="5"></textarea>
+                            </div>
+                            <div class="login-captcha text-center">
+                                <!-- Тут будет капча  -->
+                                <img src="images/captcha.jpg" alt="">
+                            </div>
+                            <div class="text-right">
+                                <input type="submit" value="Отправить" class="red-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="seeChipest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+                        <h4 class="modal-title">Видели эти часы дешевле?</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="">
-                            <div class="form-group">
-                                
+                        <p class="header-quote">
+                            Отправьте ссылку на них на сайте конкурента - и мы вышлем вам промокод на телефон или е-mail.
+                        </p>
+                        <form action="" class="form-ask">
+                            <div class="form-group half">
+                                <label for="chipMail">E-mail</label>
+                                <input type="text" class="form-control" id="chipMail">
+                            </div>
+                            <div class="form-group half">
+                                <label for="chipPhone">Телефон</label>
+                                <input type="text" class="form-control" id="chipPhone">
+                            </div>
+                            <div class="form-group half without-margin">
+                                <label for="chipLink">Ссылка на модель в другом магазине</label>
+                                <input type="text" class="form-control" id="chipLink">
+                            </div>
+                            <div class="form-group half">
+                                <label for="chipPrice">Цена в другом магазине</label>
+                                <input type="text" class="form-control" id="chipPrice">
+                            </div>
+                            <div class="half form-group without-margin">
+                                <a href="#" class="gray-link">Правила получения скидки</a>
+                            </div>
+                            <div class="text-right half">
+                                <input type="submit" value="Отправить" class="red-btn">
                             </div>
                         </form>
                     </div>
