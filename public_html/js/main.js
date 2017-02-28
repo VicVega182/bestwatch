@@ -14,6 +14,63 @@ $(document).ready(function () {
     if ($.cookie('citygate') == null) {
         $('.citygate').addClass('show-citygate');
     }
+    ;
+    if ($(document).height() > $('body').height()) {
+        $('body, html, .content').css('height', '100%');
+    }
+    ;
+    $(function () {
+        var projects = [
+            {
+                label: "Casio Gshock"
+            },
+            {
+                label: "Basio Gshock"
+            },
+            {
+                label: "Vasio Gshock"
+            },
+            {
+                label: "Dasio Gshock"
+            },
+            {
+                label: "Gasio Gshock"
+            }
+        ];
+        $("#search-auto").autocomplete({
+            minLength: 0,
+            source: projects,
+            open: function (event, ui) {
+                $('.ui-autocomplete').css('top', $('.ui-autocomplete').position().top - 45 + 'px');
+                $('.header-search__inside').removeClass('focus');
+            },
+            focus: function (event, ui) {
+                $("#search-auto").val(ui.item.label);
+                return false;
+            },
+            select: function (event, ui) {
+                $("#search-auto").val(ui.item.label);
+                $('.header-search__inside form').submit();
+                return false;
+            },
+            close: function (event, ui) {
+                $('.header-search__inside').addClass('focus');
+            }
+        });
+        $("#search-auto-mob").autocomplete({
+            minLength: 0,
+            source: projects,
+            focus: function (event, ui) {
+                $("#search-auto-mob").val(ui.item.label);
+                return false;
+            },
+            select: function (event, ui) {
+                $("#search-auto-mob").val(ui.item.label);
+                $('.header-search__mob__form').submit();
+                return false;
+            }
+        });
+    });
     if ($('.banner-slider__slider').exists()) {
         $('.banner-slider__slider').slick({
             dots: true,
@@ -208,7 +265,7 @@ $(document).ready(function () {
             ]
         });
     }
-}).on('click', '.citygate a', function(e) {
+}).on('click', '.citygate a', function (e) {
     $('.citygate').remove();
     $.cookie('citygate', 'hide');
     e.preventDefault();
@@ -400,7 +457,12 @@ $(document).ready(function () {
     var $this = $(this);
     var parent = $this.closest('.sortChange');
     var btn = parent.find('button');
-    btn.find('span').text($this.text());
+    btn.find('span').html($this.html());
+    if ($this.hasClass('desc')) {
+        btn.addClass('desc');
+    } else {
+        btn.removeClass('desc');
+    }
     e.preventDefault();
 }).on('click', '.filter-open', function (e) {
     var $this = $(this).find('i');
@@ -408,7 +470,7 @@ $(document).ready(function () {
     $this.toggleClass('icon-close');
     $('.catalog-page__list__shadow').toggle();
     e.preventDefault();
-}).on('click', '.cart-js__minus', function () {
+}).on('click', '.cart-js__minus', function (e) {
     var $this = $(this);
     var $input = $this.parent().find('input');
     var count = parseInt($input.val()) - 1;
@@ -416,7 +478,7 @@ $(document).ready(function () {
     $input.val(count);
     $input.change();
     return false;
-}).on('click', '.cart-js__plus', function () {
+}).on('click', '.cart-js__plus', function (e) {
     var $this = $(this);
     var $input = $this.parent().find('input');
     $input.val(parseInt($input.val()) + 1);

@@ -7,6 +7,7 @@
 
         <!-- STYLE START -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="css/drawer.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/slick.css">
@@ -17,6 +18,7 @@
 
         <!-- JS START -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="js/jquery.cookie.js"></script>
         <script src="js/device.min.js"></script>
         <script src="js/iscroll.js"></script>
@@ -242,6 +244,13 @@
                 </div>
                 <header class="header">
                     <div class="header-first"> <!-- Не выводить на телефонах -->
+                        <div class="header-first__search__mobile">
+                            <form action="" class="header-search__mob__form">
+                                <input type="text" id="search-auto-mob">
+                                <button type="submit"><i class="icon-search"></i></button>
+                                <a href="#" class="close-mobile-search"><i class="icon-close"></i></a>
+                            </form>
+                        </div>
                         <div class="header-first__left">
                             <div class="header-menu">
                                 <a href="#" class="menu-mobile__open"><i class="icon-menu"></i></a>
@@ -261,7 +270,7 @@
                         <div class="header-first__right">
                             <a href="#" class="header-login hide-mb" data-toggle="modal" data-target="#login"><i class="icon-user"></i><span>Войти</span></a>
                             <div class="header-mobile__right">
-                                <a href="#"><i class="icon-search"></i></a>
+                                <a href="#" class="open-mobile-search"><i class="icon-search"></i></a>
                                 <a href="#"><i class="icon-cart"><span class="counter red">5</span></i></a>
                             </div>
                         </div>
@@ -370,7 +379,7 @@
                         <div class="header-search">
                             <div class="header-search__inside">
                                 <form action="">
-                                    <input type="text">
+                                    <input type="text" id="search-auto" placeholder="Поиск по каталогу">
                                     <button type="submit"><i class="icon-search"></i></button>
                                 </form>
                             </div>
@@ -405,7 +414,7 @@
                                         <a href="#"><i class="icon-twitter"></i></a>
                                         <a href="#"><i class="icon-fb"></i></a>
                                         <a href="#"><i class="icon-ok"></i></a>
-                                        <a href="#" class="card-header__social__close"><i class="icon-shape"></i></a>
+                                        <a href="#" class="card-header__social__close"><i class="icon-close"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -458,7 +467,7 @@
                                     </div>
                                     <div class="card-buy">
                                         <a href="#" class="card-buy__cart">Купить</a>
-                                        <a href="#" class="card-buy__one">Купить в 1 клик</a>
+                                        <a href="#" class="card-buy__one" data-toggle="modal" data-target="#buyClick">Купить в 1 клик</a>
                                     </div>
                                 </div>
                                 <div class="card-body__right">
@@ -467,11 +476,13 @@
                                         <span class="card-label label-lider">Лидер продаж</span>
                                     </div>
                                     <div class="card-chipest">
-                                        <div class="card-chipest__icon"><i class="icon-sale-watch"></i></div>
-                                        <div class="card-chipest__text">
-                                            <p>Нашли дешевле?</p>
-                                            <p>Мы сделаем скидку</p>
-                                        </div>
+                                        <a href="#" data-toggle="modal" data-target="#seeChipest">
+                                            <div class="card-chipest__icon"><i class="icon-sale-watch"></i></div>
+                                            <div class="card-chipest__text">
+                                                <p>Нашли дешевле?</p>
+                                                <p>Мы сделаем скидку</p>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="card-delivery">
                                         <a href="#">Доставка курьером</a>
@@ -1224,7 +1235,7 @@
                                         <a href="#" class="side-cart__item__remove">×</a>
                                     </div>
                                 </div>
-                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-on-mail"></i>Отправить на почту</a>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="watch">
@@ -1294,7 +1305,7 @@
                                         <a href="#" class="side-cart__item__remove">×</a>
                                     </div>
                                 </div>
-                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-on-mail"></i>Отправить на почту</a>
                             </div>
                         </div>
                     </div>
@@ -1606,6 +1617,71 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="seeChipest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+                        <h4 class="modal-title">Видели эти часы дешевле?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="header-quote">
+                            Отправьте ссылку на них на сайте конкурента - и мы вышлем вам промокод на телефон или е-mail.
+                        </p>
+                        <form action="" class="form-ask">
+                            <div class="form-group half">
+                                <label for="chipMail">E-mail</label>
+                                <input type="text" class="form-control" id="chipMail">
+                            </div>
+                            <div class="form-group half">
+                                <label for="chipPhone">Телефон</label>
+                                <input type="text" class="form-control" id="chipPhone">
+                            </div>
+                            <div class="form-group half without-margin">
+                                <label for="chipLink">Ссылка на модель в другом магазине</label>
+                                <input type="text" class="form-control" id="chipLink">
+                            </div>
+                            <div class="form-group half">
+                                <label for="chipPrice">Цена в другом магазине</label>
+                                <input type="text" class="form-control" id="chipPrice">
+                            </div>
+                            <div class="half form-group without-margin">
+                                <a href="#" class="gray-link">Правила получения скидки</a>
+                            </div>
+                            <div class="text-right half">
+                                <input type="submit" value="Отправить" class="red-btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="buyClick" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icon-close"></i></button>
+                        <h4 class="modal-title">Купить в 1 клик</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" class="form-ask">
+                            <div class="form-group half">
+                                <label for="clickName">Имя</label>
+                                <input type="text" class="form-control" id="clickName">
+                            </div>
+                            <div class="form-group half">
+                                <label for="clickPhone">Телефон</label>
+                                <input type="text" class="form-control" id="clickPhone">
+                            </div>
+                            <input type="hidden" value="Casio-Gshock">
+                            <div class="text-right">
+                                <input type="submit" value="Купить" class="red-btn">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

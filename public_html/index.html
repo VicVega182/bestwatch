@@ -7,6 +7,7 @@
 
         <!-- STYLE START -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="css/drawer.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/slick.css">
@@ -17,6 +18,7 @@
 
         <!-- JS START -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="js/jquery.cookie.js"></script>
         <script src="js/device.min.js"></script>
         <script src="js/iscroll.js"></script>
@@ -254,9 +256,11 @@
                 <header class="header">
                     <div class="header-first"> <!-- Не выводить на телефонах -->
                         <div class="header-first__search__mobile">
-                            <input type="text">
-                            <button type="submit"><i class="icon-search"></i></button>
-                            <a href="#" class="close-mobile-search"><i class="icon-close"></i></a>
+                            <form action="" class="header-search__mob__form">
+                                <input type="text" id="search-auto-mob">
+                                <button type="submit"><i class="icon-search"></i></button>
+                                <a href="#" class="close-mobile-search"><i class="icon-close"></i></a>
+                            </form>
                         </div>
                         <div class="header-first__left">
                             <div class="header-menu">
@@ -386,7 +390,7 @@
                         <div class="header-search">
                             <div class="header-search__inside">
                                 <form action="">
-                                    <input type="text">
+                                    <input type="text" id="search-auto" placeholder="Поиск по каталогу">
                                     <button type="submit"><i class="icon-search"></i></button>
                                 </form>
                             </div>
@@ -582,7 +586,7 @@
                             <div class="howto-img" style="background: url(images/video-review.png) no-repeat"></div>
                         </div>
                     </div>
-                    <div class="catalog">
+                    <div class="catalog main">
                         <div class="catalog__title">
                             <h3>Мужские часы</h3>
                             <a href="#">18 856 часов <i class="icon-arrow-bold"></i></a>
@@ -734,7 +738,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="catalog">
+                    <div class="catalog main">
                         <div class="catalog__title">
                             <h3>Женские часы</h3>
                             <a href="#">18 856 часов <i class="icon-arrow-bold"></i></a>
@@ -1314,7 +1318,7 @@
                                         <a href="#" class="side-cart__item__remove">×</a>
                                     </div>
                                 </div>
-                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-on-mail"></i>Отправить на почту</a>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="watch">
@@ -1384,7 +1388,7 @@
                                         <a href="#" class="side-cart__item__remove">×</a>
                                     </div>
                                 </div>
-                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-on-mail"></i>Отправить на почту</a>
                             </div>
                         </div>
                     </div>

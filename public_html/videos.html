@@ -7,6 +7,7 @@
 
         <!-- STYLE START -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="css/drawer.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/slick.css">
@@ -17,6 +18,7 @@
 
         <!-- JS START -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="js/jquery.cookie.js"></script>
         <script src="js/device.min.js"></script>
         <script src="js/iscroll.js"></script>
@@ -242,6 +244,13 @@
                 </div>
                 <header class="header">
                     <div class="header-first"> <!-- Не выводить на телефонах -->
+                        <div class="header-first__search__mobile">
+                            <form action="" class="header-search__mob__form">
+                                <input type="text" id="search-auto-mob">
+                                <button type="submit"><i class="icon-search"></i></button>
+                                <a href="#" class="close-mobile-search"><i class="icon-close"></i></a>
+                            </form>
+                        </div>
                         <div class="header-first__left">
                             <div class="header-menu">
                                 <a href="#" class="menu-mobile__open"><i class="icon-menu"></i></a>
@@ -261,7 +270,7 @@
                         <div class="header-first__right">
                             <a href="#" class="header-login hide-mb" data-toggle="modal" data-target="#login"><i class="icon-user"></i><span>Войти</span></a>
                             <div class="header-mobile__right">
-                                <a href="#"><i class="icon-search"></i></a>
+                                <a href="#" class="open-mobile-search"><i class="icon-search"></i></a>
                                 <a href="#"><i class="icon-cart"><span class="counter red">5</span></i></a>
                             </div>
                         </div>
@@ -370,7 +379,7 @@
                         <div class="header-search">
                             <div class="header-search__inside">
                                 <form action="">
-                                    <input type="text">
+                                    <input type="text" id="search-auto" placeholder="Поиск по каталогу">
                                     <button type="submit"><i class="icon-search"></i></button>
                                 </form>
                             </div>
@@ -418,11 +427,15 @@
                             <div class="catalog-page__header__mobile news-sort"> <!-- Не выводить на ПК -->
                                 <div class="dropdown sortChange">
                                     <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span>По новизне</span> <i class="icon-arrow-left"></i>
+                                        <span>По новизне <i class="icon-arrow-left"></i></span> <i class="icon-arrow-dd"></i>
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                        <li><a href="#">По новизне</a></li>
-                                        <li><a href="#">По популярности</a></li>
+                                        <li><a href="#">По популярности <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#" class="desc">По популряности <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#">По новизне <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#" class="desc">По новизне <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#">По алфавиту <i class="icon-arrow-left"></i></a></li>
+                                        <li><a href="#" class="desc">По алфавиту <i class="icon-arrow-left"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="dropdown">
@@ -903,7 +916,7 @@
                                         <a href="#" class="side-cart__item__remove">×</a>
                                     </div>
                                 </div>
-                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-on-mail"></i>Отправить на почту</a>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="watch">
@@ -973,7 +986,7 @@
                                         <a href="#" class="side-cart__item__remove">×</a>
                                     </div>
                                 </div>
-                                <a href="#" class="side-cart__btn gray"><i class="icon-cart"></i>Отправить на почту</a>
+                                <a href="#" class="side-cart__btn gray"><i class="icon-on-mail"></i>Отправить на почту</a>
                             </div>
                         </div>
                     </div>

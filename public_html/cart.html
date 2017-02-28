@@ -7,6 +7,7 @@
 
         <!-- STYLE START -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="css/drawer.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/slick.css">
@@ -17,6 +18,7 @@
 
         <!-- JS START -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="js/jquery.cookie.js"></script>
         <script src="js/device.min.js"></script>
         <script src="js/iscroll.js"></script>
@@ -110,9 +112,9 @@
                                             </div>
                                             <div class="cart-catalog__item__count">
                                                 <div class="cart-js__number">
-                                                    <span class="cart-js__minus">-</span>
+                                                    <a href="#" class="cart-js__minus">-</a>
                                                     <input type="text" value="1" size="5" class='cart-js__input'/>
-                                                    <span class="cart-js__plus">+</span>
+                                                    <a href="#" class="cart-js__plus">+</a>
                                                 </div>
                                             </div>
                                             <div class="cart-catalog__item__price">
@@ -135,9 +137,9 @@
                                             </div>
                                             <div class="cart-catalog__item__count">
                                                 <div class="cart-js__number">
-                                                    <span class="cart-js__minus">-</span>
+                                                    <a href="#" class="cart-js__minus">-</a>
                                                     <input type="text" value="1" size="5" class='cart-js__input'/>
-                                                    <span class="cart-js__plus">+</span>
+                                                    <a href="#" class="cart-js__plus">+</a>
                                                 </div>
                                             </div>
                                             <div class="cart-catalog__item__price">
@@ -162,7 +164,7 @@
                                             <p>Тут текст для самовывоза или дропдаун с адресами</p>
                                             <div class="dropdown">
                                                 <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="button-paste">Выберите вариант доставки</span>
+                                                    <span class="button-paste">Выберите магазин</span>
                                                     <i class="icon-arrow-dd"></i>
                                                 </button>
                                                 <ul class="dropdown-menu" aria-labelledby="dLabel">
