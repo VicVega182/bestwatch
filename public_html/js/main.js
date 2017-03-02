@@ -14,11 +14,18 @@ $(document).ready(function () {
     if ($.cookie('citygate') == null) {
         $('.citygate').addClass('show-citygate');
     }
-    ;
     if ($(document).height() > $('body').height()) {
         $('body, html, .content').css('height', '100%');
     }
-    ;
+    if (device.mobile() || device.tablet()) {
+        $('.catalog-item, .checkout-block, .news-item').addClass('nohover');
+    }
+    if (device.desktop()) {
+        $('.reccomend-item').addClass('hovered');
+        if ($('.checkout-right').exists()) {
+            $('.checkout-right').addClass('sticky');
+        }
+    }
     $(function () {
         var projects = [
             {
@@ -41,7 +48,10 @@ $(document).ready(function () {
             minLength: 0,
             source: projects,
             open: function (event, ui) {
-                $('.ui-autocomplete').css('top', $('.ui-autocomplete').position().top - 45 + 'px');
+                $('.ui-autocomplete').css({
+                    'top': $('.ui-autocomplete').position().top - 45 + 'px',
+                    'width': $('.header-search__inside').width() + 8 + 'px'
+                });
                 $('.header-search__inside').removeClass('focus');
             },
             focus: function (event, ui) {
@@ -82,10 +92,13 @@ $(document).ready(function () {
         mouseenter: function () {
             $(this).addClass('hovered');
             $('.header-nav > nav > ul').find('> li:not(.hovered)').addClass('blockout');
+            $('body').append('<span class="menu-shadow"></span>');
+            $('.menu-shadow').css('top', $('.wrapper').position().top + 'px');
         },
         mouseleave: function () {
             $('.header-nav > nav > ul').find('> li').removeClass('blockout');
             $(this).removeClass('hovered');
+            $('.menu-shadow').remove();
         }
     });
     if ($(window).height() < '900') {
@@ -314,19 +327,6 @@ $(document).ready(function () {
     $('.content-right').hide();
     $this.remove();
     e.preventDefault();
-//    if ($this.width() < '1660') {
-//        var $right = $('.content-right');
-//        var $toggle = $('.content-toggle-right');
-//        var $mobile = $('.mobile-menu__header');
-//        if (!$right.is(e.target) // если клик был не по нашему блоку
-//                && $right.has(e.target).length === 0
-//                && !$toggle.is(e.target)
-//                && $toggle.has(e.target).length === 0
-//                && !$mobile.is(e.target)
-//                && $mobile.has(e.target).length === 0) { // и не по его дочерним элементам и то что не открыт
-//            $right.hide(); // скрываем его
-//        }
-//    }
 }).on('click', '.footer-menu .title', function (e) {
     var $this = $(this);
     var ul = $this.closest('ul');
@@ -403,7 +403,7 @@ $(document).ready(function () {
         $this.find('.nav-tabs').slick('unslick');
     }
 }).on('shown.bs.modal', '#login', function () {
-    var $this = $(this);
+    var $this = new $(this);
     $this.find('.login-slider').css('height', $this.find('.modal-content').height() + 'px').slick({
         arrows: false,
         dots: true,
@@ -418,13 +418,13 @@ $(document).ready(function () {
     }, 100);
     $('.modal').not($this).modal('hide');
 }).on('hide.bs.modal', '#login', function () {
-    var $this = $(this);
+    var $this = new $(this);
     $this.find('.login-left').addClass('hide-mb');
     if ($(document).width() < '768') {
         $this.find('.login-banner').show();
     }
 }).on('shown.bs.modal', '#registration', function () {
-    var $this = $(this);
+    var $this = new $(this);
     $this.find('.login-slider').css('height', $this.find('.modal-content').height() + 'px').slick({
         arrows: false,
         dots: true,
@@ -439,7 +439,7 @@ $(document).ready(function () {
     }, 100);
     $('.modal').not($this).modal('hide');
 }).on('hide.bs.modal', '#registration', function () {
-    var $this = $(this);
+    var $this = new $(this);
     $this.find('.login-left').addClass('hide-mb');
     if ($(document).width() < '768') {
         $this.find('.login-banner').show();
@@ -487,7 +487,11 @@ $(document).ready(function () {
 }).on('change', '.cart-js__input', function () {
     var $this = $(this);
     var parent = $this.closest('.cart-catalog__item');
-    parent.find('.cart-item__price__quote').removeClass('hidden');
+    if ($this.val() > 1) {
+        parent.find('.cart-item__price__quote').removeClass('hidden');
+    } else {
+        parent.find('.cart-item__price__quote').addClass('hidden');
+    }
     parent.find('.cart-js__count').text($this.val());
     parent.find('.cart-js__total').text($this.val() * parent.find('.cart-js__price').text());
     var i = 0;
@@ -516,6 +520,11 @@ $(document).ready(function () {
     delivery.text($this.data('price'));
     all.text(parseInt(summ.text()) + $this.data('price'));
     e.preventDefault;
+}).on('click', '.cartPickup .dropdown-menu li', function (e) {
+    var $this = $(this);
+    var dropdown = $this.closest('.dropdown');
+    dropdown.find('.button-paste').html($this.html());
+    e.preventDefault;
 }).on('click', '.card-share', function (e) {
     $('.card-header__social').show();
     e.preventDefault();
@@ -528,14 +537,30 @@ $(document).ready(function () {
 }).on('click', '.close-mobile-search', function (e) {
     $('.header-first__search__mobile').toggle();
     e.preventDefault();
+}).on('show.bs.collapse', '#collapseCheckout', function () {
+    $('.checkout-cart__showall').text('Скрыть');
+}).on('hide.bs.collapse', '#collapseCheckout', function () {
+    $('.checkout-cart__showall').text('Показать все');
+}).on('click', '.text-page__gallery .slick-slide, .shop-page__gallery .slick-slide', function () {
+    var $this = $(this);
+    $this.closest('.slick-slider').slick('slickNext');
+}).on('click', '.card-sale.full', function (e) {
+    var $this = $(this);
+    $('.card-oldprice').removeClass('hidden');
+    $('.card-oldprice span').text($('.card-price span').text());
+    $('.card-price span').text(parseInt(parseInt($('.card-oldprice span').text()) - (parseInt($('.card-oldprice span').text()) * ($this.data('sale') / 100))));
+    $this.text('-' + $this.data('sale') + '%').removeClass('full');
+    e.preventDefault();
 });
 $(window).resize(function () {
     $('.banner-slider__slider').css('max-width', $('.banner-slider').width() * (parseFloat($('.banner-slider__slider').css('flex-basis')) / 100) + 'px');
+    $('.content-toggle-right .inside').css('max-width', $('.content-toggle-right').width() + 'px');
+    $('.slick-slider').slick('refresh');
     $('.content-right .inside').css('max-width', $('.content-right').width() + 'px');
     if ($(document).width() > 1920) {
         $('.content-right .inside .nav-tabs').css('max-width', $('.content-right').width() + 'px');
     }
-    if ($(document).width() < '768') {
+    if ($(document).width() < '768' && device.mobile()) {
         $('.news-block').slick({
             dots: false,
             arrows: false,
@@ -565,9 +590,19 @@ $(window).resize(function () {
         $('.news-block').slick('unslick');
         $('.catalog-list').slick('unslick');
     }
-    if ($('.card-slider').exists()) {
-        $('.card-slider').css('max-width', $('.card-body').width() * 0.35 - 35 + 'px');
-    }
 });
-
+window.addEventListener("orientationchange", function () {
+    location.reload();
+    $('.slick-slider').slick('refresh');
+}, false);
+$(function () {
+    $(".content-right-shadow").swipe({
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            if (direction == 'right') {
+                $('.content-right').hide();
+                $('.content-right-shadow').remove();
+            }
+        }
+    });
+});
 
