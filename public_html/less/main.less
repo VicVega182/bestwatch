@@ -50,11 +50,11 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?kpmjxp');
-    src:  url('../fonts/icomoon.eot?kpmjxp#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?kpmjxp') format('truetype'),
-        url('../fonts/icomoon.woff?kpmjxp') format('woff'),
-        url('../fonts/icomoon.svg?kpmjxp#icomoon') format('svg');
+    src:  url('../fonts/icomoon.eot?89ffwb');
+    src:  url('../fonts/icomoon.eot?89ffwb#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?89ffwb') format('truetype'),
+        url('../fonts/icomoon.woff?89ffwb') format('woff'),
+        url('../fonts/icomoon.svg?89ffwb#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -5902,11 +5902,11 @@ footer {
         display: inline-block;
         vertical-align: top;
         letter-spacing: normal;
-        width: ~'calc(25% - 20px)';
+        width: ~'calc(33.33% - 17px)';
         margin-right: 25px;
         margin-bottom: 25px;
         position: relative;
-        &:nth-child(4n) {
+        &:nth-child(3n) {
             margin-right: 0;
         }
         &:hover {
@@ -5948,15 +5948,6 @@ footer {
                 margin-right: 25px;
             }
             &:nth-child(2n) {
-                margin-right: 0;
-            }
-        }
-        @media (min-width: 1200px) and (max-width: 1439px) {
-            width: ~'calc(33.33% - 17px)';
-            &:nth-child(4n) {
-                margin-right: 25px;
-            }
-            &:nth-child(3n) {
                 margin-right: 0;
             }
         }
@@ -6230,7 +6221,8 @@ footer {
             border-bottom: 1px solid @gray;
             padding: 50px 0;
             @media @mb {
-                padding: 25px 0;
+                padding: 25px 16px;
+                text-align: left;
             }
             h1 {
                 margin: 0;
@@ -6255,11 +6247,47 @@ footer {
                 top: 50%;
                 margin-top: -18px;
                 @media @mb {
-                    display: none;
+                    display: inline-block;
+                    position: static;
+                    margin-top: 20px;
+                    padding: 0;
+                    border: none;
                 }
                 &:hover {
                     color: @black;
                     border-color: @black;
+                }
+            }
+            .filter-open {
+                display: none;
+                vertical-align: middle;
+                letter-spacing: normal;
+                font-size: 14px;
+                color: @black;
+                padding: 14px 30px;
+                border: none;
+                position: absolute;
+                right: 0;
+                top: 16px;
+                margin-top: 0;
+                &.opened {
+                    z-index: 100;
+                }
+                @media @mb {
+                    display: inline-block;
+                }
+                .counter {
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    background-color: @red;
+                    color: @white;
+                    border-radius: 50%;
+                    font-size: 9px;
+                    text-align: center;
+                    line-height: 14px;
+                    top: 8px;
+                    right: 16px;
                 }
             }
         }
@@ -6615,8 +6643,13 @@ footer {
                     align-items: center;
                     min-height: 340px;
                     outline: none;
+                    max-width: 600px;
+                    @media @tab {
+                        max-width: 400px;
+                    }
                     @media @mb {
                         flex-basis: 90%;
+                        max-width: 288px;
                     }
                     a {
                         margin: 0 auto;
@@ -7113,6 +7146,23 @@ footer {
                 }
             }
             .catalog-list {
+                &.main {
+                    background: @white;
+                    .catalog-item {
+                        @media @mb {
+                            max-width: 230px;
+                            margin-right: 10px;
+                            background: @white;
+                            border: 1px solid @gray;
+                            .catalog-item__header {
+                                padding: 20px 16px;
+                            }
+                            .catalog-item__body, .catalog-item__footer {
+                                width: 100%;
+                            }
+                        }                        
+                    }
+                }
                 .catalog-item {
                     width: 20%;
                     &.last-element {
@@ -8075,7 +8125,8 @@ footer {
         background: @white;
         top: 0;
         @media @mb {
-            top: 60px;
+            top: 52px;
+            border-top: 1px solid @gray;
         }
     }
     @media @mb {

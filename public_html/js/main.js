@@ -465,9 +465,11 @@ $(document).ready(function () {
     }
     e.preventDefault();
 }).on('click', '.filter-open', function (e) {
+    var $opens = $(this);
     var $this = $(this).find('i');
     $('.catalog-page__filter').toggleClass('is-open');
     $this.toggleClass('icon-close');
+    $opens.toggleClass('opened');
     $('.catalog-page__list__shadow').toggle();
     e.preventDefault();
 }).on('click', '.cart-js__minus', function (e) {
